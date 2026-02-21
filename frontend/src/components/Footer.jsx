@@ -1,5 +1,5 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
-import logo from "../assets/audiophileLogo.png";
+import logo from "../assets/landing page/audiophileLogo.png";
 import React from "react";
 
 export default function Footer() {

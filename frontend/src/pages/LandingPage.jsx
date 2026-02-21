@@ -1,18 +1,19 @@
 import React from "react";
-import markII from "../assets/XX99 MARK II.png";
+import markII from "../assets/landing page/XX99 MARK II.png";
 import BrownButton from "../components/BrownButton";
-import headphones from "../assets/headphones.png";
-import shadow from "../assets/shadow.png";
+import headphones from "../assets/landing page/headphones.png";
+import shadow from "../assets/landing page/shadow.png";
 import { ChevronRight } from "lucide-react";
 import ProductCard from "../components/ProductCard";
-import speaker from "../assets/speaker.png";
-import earphones from "../assets/earphones.png";
-import zx9 from "../assets/ZX9.png";
+import speaker from "../assets/landing page/speaker.png";
+import earphones from "../assets/landing page/earphones.png";
+import zx9 from "../assets/landing page/ZX9.png";
 import BlackButton from "../components/BlackButton";
-import zx7 from "../assets/zx7.png";
+import zx7 from "../assets/landing page/zx7.png";
 import TransparentButton from "../components/TransparentButton";
-import yx1 from "../assets/yx1.png";
-import model from "../assets/model.png";
+import yx1 from "../assets/landing page/yx1.png";
+import model from "../assets/landing page/model.png";
+import EndStatement from "../components/EndStatement";
 
 export default function LandingPage() {
   return (
@@ -102,27 +103,7 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <div className="mt-30 ">
-          <div className="rounded-xl overflow-hidden">
-            <img src={model} alt="man wearing headphone" />
-          </div>
-
-          <h2 className=" font-semibold text-[28px] tracking-widest mt-10 text-center">
-            BRINGING YOU THE <br /> <span className="text-[#d87d4a]">BEST</span>{" "}
-            AUDIO GEAR
-          </h2>
-          <p className="text-[15px]  opacity-50 text-center mt-8 ">
-            Located at the heart of New York City,
-            <br /> Audiophile is the premier store for high end <br />{" "}
-            headphones, earphones, speakers, and audio <br /> accessories. We
-            have a large showroom and <br />
-            luxury demonstration rooms available for you <br />
-            to browse and experience a wide range of our <br /> products. Stop
-            by our store to meet some of <br /> the fantastic people who make
-            Audiophile the <br />
-            best place to buy your portable audio equipment.
-          </p>
-        </div>
+        <EndStatement />
       </div>
     </div>
   );
