@@ -21,7 +21,7 @@ export default function EndStatement() {
         to browse and experience a wide range of our <br /> products. Stop by
         our store to meet some of <br /> the fantastic people who make
         Audiophile the <br />
-        best place to buy your portable audio equipment.
+        best place to buy your portable audio <br /> equipment.
       </p>
     </div>
   );

@@ -13,12 +13,12 @@ export default function ProductCardCategory({
 }) {
   return (
     <div className="w-82 flex flex-col mt-16 ">
-      <div className="bg-[#f1f1f1] h-88 flex justify-center items-center  ">
+      <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl ">
         <div>
           <img src={image} alt="xx99 mark 2 headphones image" />
         </div>
       </div>
-      <div className="flex flex-col items-center mt-8">
+      <div className="flex flex-col items-center mt-8 text-white">
         <h2 className=" font-semibold text-[28px] tracking-widest mt-6 text-black text-center ">
           {device} <br />
           {category}
