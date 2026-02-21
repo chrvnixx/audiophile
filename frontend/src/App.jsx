@@ -8,6 +8,7 @@ import SpeakersPage from "./pages/SpeakersPage";
 import EarphonesPage from "./pages/EarphonesPage";
 import Xx99Mark2Page from "./pages/Xx99Mark2Page";
 import Xx99Mark1Page from "./pages/Xx99Mark1Page";
+import Zx9SpeakerPage from "./pages/Zx9SpeakerPage";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             element={<Xx99Mark2Page />}
           />
           <Route path="/headphones/xx99-mark-one" element={<Xx99Mark1Page />} />
+          <Route path="/speakers/zx9" element={<Zx9SpeakerPage />} />
         </Routes>
         <Footer />
       </div>
