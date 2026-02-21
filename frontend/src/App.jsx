@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import HeadphonesPage from "./pages/HeadphonesPage";
 import SpeakersPage from "./pages/SpeakersPage";
 import EarphonesPage from "./pages/EarphonesPage";
+import Xx99Mark2Page from "./pages/Xx99Mark2Page";
 
 function App() {
   return (
@@ -17,6 +18,11 @@ function App() {
           <Route path="/headphones" element={<HeadphonesPage />} />
           <Route path="/speakers" element={<SpeakersPage />} />
           <Route path="/earphones" element={<EarphonesPage />} />
+
+          <Route
+            path="/headphones/:xx99-mark-two"
+            element={<Xx99Mark2Page />}
+          />
         </Routes>
         <Footer />
       </div>
