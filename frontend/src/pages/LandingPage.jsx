@@ -14,6 +14,7 @@ import TransparentButton from "../components/TransparentButton";
 import yx1 from "../assets/landing page/yx1.png";
 import model from "../assets/landing page/model.png";
 import EndStatement from "../components/EndStatement";
+import { Link } from "react-router";
 
 export default function LandingPage() {
   return (
@@ -34,7 +35,9 @@ export default function LandingPage() {
             quality made for the <br /> passionate music enthusiast.
           </p>
 
-          <BrownButton text="SEE PRODUCT" />
+          <Link to="/headphones/xx99-mark-two">
+            <BrownButton text="SEE PRODUCT" />
+          </Link>
         </div>
       </div>
 
@@ -44,16 +47,24 @@ export default function LandingPage() {
             image={headphones}
             shadow={shadow}
             ChevronRight={ChevronRight}
+            category="HEADPHONES"
+            linkto="/headphones"
           />
+
           <ProductCard
             image={speaker}
             shadow={shadow}
             ChevronRight={ChevronRight}
+            category="SPEAKERS"
+            linkto="/speakers"
           />
+
           <ProductCard
             image={earphones}
             shadow={shadow}
             ChevronRight={ChevronRight}
+            category="EARPHONES"
+            linkto="/earphones"
           />
         </div>
 

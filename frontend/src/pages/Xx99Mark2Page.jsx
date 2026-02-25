@@ -16,11 +16,18 @@ import ProductCard from "../components/ProductCard";
 import EndStatement from "../components/EndStatement";
 
 import ProductCard2 from "../components/ProductCard2";
+import { useNavigate } from "react-router";
 
 export default function Xx99Mark2Page() {
+  const navigate = useNavigate();
   return (
     <div className=" relative flex flex-col items-center py-5">
-      <span className="absolute left-6 opacity-50">Go Back</span>
+      <span
+        onClick={() => navigate(-1)}
+        className="absolute left-6 opacity-50 cursor-pointer hover:underline"
+      >
+        Go Back
+      </span>
 
       <div className="w-82 flex flex-col mt-16 ">
         <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl  ">

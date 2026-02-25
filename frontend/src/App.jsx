@@ -18,6 +18,8 @@ import Checkout from "./pages/Checkout";
 import CartModal from "./components/CartModal";
 import Cart from "./components/Cart";
 import MenuModal from "./components/MenuModal";
+import Menu from "./components/Menu";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [openCart, setOpenCart] = useState(false);
@@ -25,14 +27,17 @@ function App() {
   return (
     <>
       <div>
-        <Navbar setOpenCart={setOpenCart} />
+        <Navbar setOpenCart={setOpenCart} setOpenMenu={setOpenMenu} />
 
         <CartModal openCart={openCart}>
           <Cart setOpenCart={setOpenCart} />
         </CartModal>
 
-        <MenuModal openMenu={openMenu}></MenuModal>
+        <MenuModal openMenu={openMenu} onClose={() => setOpenMenu(false)}>
+          <Menu setOpenMenu={setOpenMenu} />
+        </MenuModal>
 
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/headphones" element={<HeadphonesPage />} />
