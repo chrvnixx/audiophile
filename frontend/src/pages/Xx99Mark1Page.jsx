@@ -77,7 +77,7 @@ export default function Xx99Mark1Page() {
             IN THE BOX
           </h2>
 
-          <div className="flex flex-col text-15px gap-3   ">
+          <div className="flex flex-col text-15px gap-3 mt-4  ">
             <div className="flex items-center gap-5">
               <span className="text-[#d87d4a]">1x</span>
               <span className="opacity-50">Headphone Unit</span>
