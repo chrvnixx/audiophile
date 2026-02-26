@@ -1,30 +1,30 @@
 import React from "react";
-import img1 from "../assets/zx9 page/img1.png";
-import img2 from "../assets/zx9 page/img2.png";
-import img3 from "../assets/zx9 page/img3.png";
-import zx9main from "../assets/zx9 page/zx9main.png";
+import xx59H from "../assets/xx59 page/xx59.png";
+import CheckoutButtons from "../components/CheckoutButtons";
+import ProductCard2 from "../components/ProductCard2";
+import ProductCard from "../components/ProductCard";
+import EndStatement from "../components/EndStatement";
+import img1 from "../assets/xx59 page/img1.png";
+import img2 from "../assets/xx59 page/img2.png";
+import img3 from "../assets/xx59 page/img3.png";
 import mark2 from "../assets/xx99 mark 1 page/mark2.png";
 import xx59 from "../assets/xx99 mark 2 page/xx59.png";
 import zx9 from "../assets/xx99 mark 2 page/zx9.png";
-import CheckoutButtons from "../components/CheckoutButtons";
+
 import { ChevronRight } from "lucide-react";
 import headphones from "../assets/landing page/headphones.png";
 import shadow from "../assets/landing page/shadow.png";
 import speaker from "../assets/landing page/speaker.png";
 import earphones from "../assets/landing page/earphones.png";
-import ProductCard from "../components/ProductCard";
-import EndStatement from "../components/EndStatement";
-
-import ProductCard2 from "../components/ProductCard2";
 import { useNavigate } from "react-router";
 
-export default function Zx9SpeakerPage() {
+export default function Xx59HeadphonesPage() {
   const navigate = useNavigate();
   return (
     <div className=" relative flex flex-col items-center py-5">
       <span
         onClick={() => navigate(-1)}
-        className="absolute cursor-pointer hover:underline left-6 opacity-50"
+        className="absolute cursor-pointer left-6 opacity-50"
       >
         Go Back
       </span>
@@ -32,27 +32,24 @@ export default function Zx9SpeakerPage() {
       <div className="w-82 flex flex-col mt-16 ">
         <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl  ">
           <div>
-            <img src={zx9main} alt="zx9 speaker image" />
+            <img src={xx59H} alt="xx99 mark 1 headphones image" />
           </div>
         </div>
         <div className="flex flex-col  mt-8">
-          <span className=" tracking-[0.6em] font-light  text-[#d87d4a] text-[14px] ">
-            NEW PRODUCT
-          </span>
-          <h2 className=" font-semibold text-[28px] tracking-widest mt-6 text-black ">
-            ZX9 <br />
-            SPEAKER
+          <h2 className=" font-semibold text-[28px] tracking-widest mt-6 text-black  ">
+            XX59 <br />
+            HEADPHONES
           </h2>
 
           <p className="text-[15px]  opacity-50  mt-8 text-black ">
-            Upgrade your sound system with the all new <br />
-            ZX9 active speaker. It’s a bookshelf speaker <br />
-            system that offers truly wireless connectivity <br />- creating new
-            possibilities for more pleasing <br />
-            and practical audio setups.
+            As the gold standard for headphones, the <br />
+            classic XX99 Mark I offers detailed and <br />
+            accurate audio reproduction for audiophiles, <br />
+            mixing engineers, and music aficionados alike <br />
+            in studios and on the go.
           </p>
 
-          <span className="mt-6 font-bold">$ 4,500</span>
+          <span className="mt-6 font-bold">$ 899</span>
 
           <CheckoutButtons />
 
@@ -61,24 +58,19 @@ export default function Zx9SpeakerPage() {
           </h2>
 
           <p className="text-[15px]  opacity-50  mt-6 text-black">
-            Connect via Bluetooth or nearly any wired <br />
-            source. This speaker features optical, digital <br />
-            coaxial, USB Type-B, stereo <br />
-            RCA, and stereo XLR inputs, allowing you to have up to five <br />
-            wired source devices connected for easy <br />
-            switching. Improved bluetooth technology <br />
-            offers near lossless audio quality at up to 328ft <br />
-            (100m).
+            These headphones have been created from durable, high-quality
+            materials tough enough to take anywhere. Its compact folding design
+            fuses comfort and minimalist style making it perfect for travel.
+            Flawless transmission is assured by the latest wireless technology
+            engineered for audio synchronization with videos. <br />
             <span className="mt-4">
-              Discover clear, more natural sounding highs <br />
-              than the competition with ZX9’s signature <br />
-              planar diaphragm tweeter. Equally important is <br />
-              its powerful room-shaking bass courtesy of a <br />
-              6.5” aluminum alloy bass unit. You’ll be able to <br />
-              enjoy equal sound quality whether in a large <br />
-              room or small den. Furthermore, you will <br />
-              experience new sensations from old songs <br />
-              since it can respond to even the subtle waveforms.
+              More than a simple pair of headphones, this headset features a
+              pair of built-in microphones for clear, hands-free calling when
+              paired with a compatible smartphone. Controlling music and calls
+              is also intuitive thanks to easy-access touch buttons on the
+              earcups. Regardless of how you use the XX59 headphones, you can do
+              so all day thanks to an impressive 30-hour battery life that can
+              be rapidly recharged via USB-C.
             </span>
           </p>
 
@@ -88,12 +80,12 @@ export default function Zx9SpeakerPage() {
 
           <div className="flex flex-col text-15px gap-3 mt-4  ">
             <div className="flex items-center gap-5">
-              <span className="text-[#d87d4a]">2x</span>
-              <span className="opacity-50">Speaker Unit</span>
+              <span className="text-[#d87d4a]">1x</span>
+              <span className="opacity-50">Headphone Unit</span>
             </div>
             <div className="flex items-center gap-5">
               <span className="text-[#d87d4a]">2x</span>
-              <span className="opacity-50">Speaker Cloth Panel</span>
+              <span className="opacity-50">Replacement Earcups</span>
             </div>
             <div className="flex items-center gap-5">
               <span className="text-[#d87d4a]">1x</span>
@@ -101,12 +93,12 @@ export default function Zx9SpeakerPage() {
             </div>
             <div className="flex items-center gap-5">
               <span className="text-[#d87d4a]">1x</span>
-              <span className="opacity-50">3.5mm 10m Audio Cable</span>
+              <span className="opacity-50">3.5mm 5m Audio Cable</span>
             </div>
-            <div className="flex items-center gap-5">
+            {/* <div className="flex items-center gap-5">
               <span className="text-[#d87d4a]">1x</span>
-              <span className="opacity-50"> 10m Optical Cable</span>
-            </div>
+              <span className="opacity-50"> Travel Bag</span>
+            </div> */}
           </div>
         </div>
       </div>

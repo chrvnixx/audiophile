@@ -41,7 +41,7 @@ export default function SpeakersPage() {
             -- creating new possibilities for more pleasing <br />
             and practical audio setups.
           </p>
-          <BrownButton text="SEE PRODUCT" />
+          <BrownButton text="SEE PRODUCT" linkto="/speakers/zx9" />
         </div>
       </div>
 
@@ -54,6 +54,7 @@ export default function SpeakersPage() {
         line3="high-end audiophile components that  "
         line4="represents the top of the line powered"
         line5="speakers for home or studio use."
+        linkto="/speakers/zx7"
       />
 
       <div className="mt-30 text-black ">
@@ -62,16 +63,19 @@ export default function SpeakersPage() {
             image={headphones}
             shadow={shadow}
             ChevronRight={ChevronRight}
+            linkto="/headphones"
           />
           <ProductCard
             image={speaker}
             shadow={shadow}
             ChevronRight={ChevronRight}
+            linkto="/speakers"
           />
           <ProductCard
             image={earphones}
             shadow={shadow}
             ChevronRight={ChevronRight}
+            linkto="/earphones"
           />
         </div>
       </div>

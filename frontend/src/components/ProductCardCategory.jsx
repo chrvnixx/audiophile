@@ -10,6 +10,7 @@ export default function ProductCardCategory({
   line3,
   line4,
   line5,
+  linkto,
 }) {
   return (
     <div className="w-82 flex flex-col mt-16 ">
@@ -33,7 +34,7 @@ export default function ProductCardCategory({
           {line4} <br />
           {line5}
         </p>
-        <BrownButton text="SEE PRODUCT" />
+        <BrownButton text="SEE PRODUCT" linkto={linkto} />
       </div>
     </div>
   );

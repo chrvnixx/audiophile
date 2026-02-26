@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router";
 
-export default function TransparentButton({ text }) {
+export default function TransparentButton({ text, linkto }) {
   return (
-    <div>
+    <Link to={linkto}>
       <button className="bg-transparent border border-black px-7.5 py-3.75 text-[13px] mt-7 tracking-wider ">
         {text}
       </button>
-    </div>
+    </Link>
   );
 }

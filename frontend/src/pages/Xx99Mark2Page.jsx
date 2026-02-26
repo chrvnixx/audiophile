@@ -1,4 +1,3 @@
-import React from "react";
 import xx99 from "../assets/headphones page/xx99.png";
 import model2 from "../assets/xx99 mark 2 page/model2.png";
 import model3 from "../assets/xx99 mark 2 page/model3.png";
@@ -17,9 +16,21 @@ import EndStatement from "../components/EndStatement";
 
 import ProductCard2 from "../components/ProductCard2";
 import { useNavigate } from "react-router";
+import { useCart } from "../components/CartContext";
 
 export default function Xx99Mark2Page() {
   const navigate = useNavigate();
+
+  const { addToCart, quantity, setQuantity } = useCart();
+
+  const product = {
+    id: 2,
+    name: "XX99 MK II",
+    image: xx99,
+    quantity: quantity,
+    price: "$2,999",
+  };
+
   return (
     <div className=" relative flex flex-col items-center py-5">
       <span
@@ -55,7 +66,11 @@ export default function Xx99Mark2Page() {
 
           <span className="mt-6 font-bold">$ 2,999</span>
 
-          <CheckoutButtons />
+          <CheckoutButtons
+            onClick={() => addToCart(product)}
+            quantity={quantity}
+            setQuantity={setQuantity}
+          />
 
           <h2 className="font-semibold text-[24px] tracking-widest mt-22 text-black">
             FEATURES
@@ -123,9 +138,17 @@ export default function Xx99Mark2Page() {
         </h2>
 
         <div className="flex flex-col items-center mt-10 text-white gap-14">
-          <ProductCard2 image={headphones} product="XX99 MARK I" />
-          <ProductCard2 image={xx59} product="XX59" />
-          <ProductCard2 image={zx9} product="ZX9 SPEAKER" />
+          <ProductCard2
+            image={headphones}
+            product="XX99 MARK I"
+            linkto="/headphones/xx99-mark-one"
+          />
+          <ProductCard2 image={xx59} product="XX59" linkto="/headphones/xx59" />
+          <ProductCard2
+            image={zx9}
+            product="ZX9 SPEAKER"
+            linkto="/speakers/zx9"
+          />
         </div>
 
         <div className="mt-30 text-black ">
@@ -134,16 +157,19 @@ export default function Xx99Mark2Page() {
               image={headphones}
               shadow={shadow}
               ChevronRight={ChevronRight}
+              linkto="/headphones"
             />
             <ProductCard
               image={speaker}
               shadow={shadow}
               ChevronRight={ChevronRight}
+              linkto="/speakers"
             />
             <ProductCard
               image={earphones}
               shadow={shadow}
               ChevronRight={ChevronRight}
+              linkto="/earphones"
             />
           </div>
         </div>

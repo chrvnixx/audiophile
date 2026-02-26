@@ -20,10 +20,12 @@ import Cart from "./components/Cart";
 import MenuModal from "./components/MenuModal";
 import Menu from "./components/Menu";
 import ScrollToTop from "./components/ScrollToTop";
+import Xx59HeadphonesPage from "./pages/Xx59HeadphonesPage";
 
 function App() {
   const [openCart, setOpenCart] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
+
   return (
     <>
       <div>
@@ -47,6 +49,7 @@ function App() {
 
           <Route path="/headphones/xx99-mark-two" element={<Xx99Mark2Page />} />
           <Route path="/headphones/xx99-mark-one" element={<Xx99Mark1Page />} />
+          <Route path="/headphones/xx59" element={<Xx59HeadphonesPage />} />
           <Route path="/speakers/zx9" element={<Zx9SpeakerPage />} />
           <Route path="/speakers/zx7" element={<Zx7SpeakerPage />} />
           <Route path="/earphones/yx1" element={<Yx1EarphonePage />} />

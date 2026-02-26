@@ -35,9 +35,7 @@ export default function LandingPage() {
             quality made for the <br /> passionate music enthusiast.
           </p>
 
-          <Link to="/headphones/xx99-mark-two">
-            <BrownButton text="SEE PRODUCT" />
-          </Link>
+          <BrownButton text="SEE PRODUCT" linkto="/headphones/xx99-mark-two" />
         </div>
       </div>
 
@@ -86,7 +84,7 @@ export default function LandingPage() {
               deliver truly <br /> remarkable sound.
             </p>
 
-            <BlackButton text="SEE PRODUCT" />
+            <BlackButton text="SEE PRODUCT" linkto="/speakers/zx9" />
           </div>
         </div>
 
@@ -96,7 +94,7 @@ export default function LandingPage() {
             <h2 className=" font-semibold text-[28px] tracking-widest">
               ZX7 SPEAKER
             </h2>
-            <TransparentButton text="SEE PRODUCT" />
+            <TransparentButton text="SEE PRODUCT" linkto="/speakers/zx7" />
           </div>
         </div>
 
@@ -109,7 +107,7 @@ export default function LandingPage() {
               <h2 className=" font-semibold text-[28px] tracking-widest">
                 YX1 EARPHONES
               </h2>
-              <TransparentButton text="SEE PRODUCT" />
+              <TransparentButton text="SEE PRODUCT" linkto="/earphones/yx1" />
             </div>
           </div>
         </div>

@@ -39,7 +39,7 @@ export default function EarphonesPage() {
             sound even in noisy environments with its <br />
             active noise cancellation feature.
           </p>
-          <BrownButton text="SEE PRODUCT" />
+          <BrownButton text="SEE PRODUCT" linkto="/earphones/yx1" />
         </div>
       </div>
 
@@ -49,16 +49,19 @@ export default function EarphonesPage() {
             image={headphones}
             shadow={shadow}
             ChevronRight={ChevronRight}
+            linkto="/headphones"
           />
           <ProductCard
             image={speaker}
             shadow={shadow}
             ChevronRight={ChevronRight}
+            linkto="/speakers"
           />
           <ProductCard
             image={earphones}
             shadow={shadow}
             ChevronRight={ChevronRight}
+            linkto="/earphones"
           />
         </div>
       </div>

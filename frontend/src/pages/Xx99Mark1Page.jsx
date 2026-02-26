@@ -16,11 +16,19 @@ import ProductCard from "../components/ProductCard";
 import EndStatement from "../components/EndStatement";
 
 import ProductCard2 from "../components/ProductCard2";
+import { useNavigate } from "react-router";
 
 export default function Xx99Mark1Page() {
+  const navigate = useNavigate();
+
   return (
     <div className=" relative flex flex-col items-center py-5">
-      <span className="absolute left-6 opacity-50">Go Back</span>
+      <span
+        onClick={() => navigate(-1)}
+        className="absolute cursor-pointer left-6 opacity-50"
+      >
+        Go Back
+      </span>
 
       <div className="w-82 flex flex-col mt-16 ">
         <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl  ">
@@ -114,9 +122,17 @@ export default function Xx99Mark1Page() {
         </h2>
 
         <div className="flex flex-col items-center mt-10 text-white gap-14">
-          <ProductCard2 image={mark2} product="XX99 MARK I" />
-          <ProductCard2 image={xx59} product="XX59" />
-          <ProductCard2 image={zx9} product="ZX9 SPEAKER" />
+          <ProductCard2
+            image={mark2}
+            product="XX99 MARK II"
+            linkto="/headphones/xx99-mark-two"
+          />
+          <ProductCard2 image={xx59} product="XX59" linkto="/headphones/xx59" />
+          <ProductCard2
+            image={zx9}
+            product="ZX9 SPEAKER"
+            linkto="/speakers/zx9"
+          />
         </div>
 
         <div className="mt-30 text-black ">
@@ -125,16 +141,19 @@ export default function Xx99Mark1Page() {
               image={headphones}
               shadow={shadow}
               ChevronRight={ChevronRight}
+              linkto="/headphones"
             />
             <ProductCard
               image={speaker}
               shadow={shadow}
               ChevronRight={ChevronRight}
+              linkto="/speakers"
             />
             <ProductCard
               image={earphones}
               shadow={shadow}
               ChevronRight={ChevronRight}
+              linkto="/earphones"
             />
           </div>
         </div>

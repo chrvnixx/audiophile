@@ -42,7 +42,7 @@ export default function HeadphonesPage() {
             reproducing the balanced depth and precision <br />
             of studio-quality sound.
           </p>
-          <BrownButton text="SEE PRODUCT" />
+          <BrownButton text="SEE PRODUCT" linkto="/headphones/xx99-mark-two" />
         </div>
       </div>
 
@@ -55,6 +55,7 @@ export default function HeadphonesPage() {
         line3="accurate audio reproduction for audiophiles, "
         line4="mixing engineers, and music aficionados alike"
         line5="in studios and on the go."
+        linkto="/headphones/xx99-mark-one"
       />
       <ProductCardCategory
         image={xx59}
@@ -65,6 +66,7 @@ export default function HeadphonesPage() {
         line3="XX59 headphones. The stylish yet durable "
         line4="versatile wireless headset is a brilliant "
         line5="companion at home or on the move."
+        linkto="/headphones/xx59"
       />
 
       <div className="mt-30 text-black ">
@@ -73,16 +75,19 @@ export default function HeadphonesPage() {
             image={headphones}
             shadow={shadow}
             ChevronRight={ChevronRight}
+            linkto="/headphones"
           />
           <ProductCard
             image={speaker}
             shadow={shadow}
             ChevronRight={ChevronRight}
+            linkto="/speakers"
           />
           <ProductCard
             image={earphones}
             shadow={shadow}
             ChevronRight={ChevronRight}
+            linkto="/earphones"
           />
         </div>
       </div>
