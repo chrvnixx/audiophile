@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BrownButton from "../components/BrownButton";
+import { useCart } from "../components/CartContext";
+import { useNavigate } from "react-router";
 
 export default function Checkout() {
+  const navigate = useNavigate();
+  const { cart, total } = useCart();
+  const [vat, setVat] = useState(0);
+  const [shipping, setShipping] = useState(0);
+  const [grandTotal, setGrandTotal] = useState(0);
+
+  useEffect(() => {
+    setVat((total * 10) / 100);
+    setShipping(cart.length * 10);
+    setGrandTotal(total + vat + shipping);
+  }, [total]);
+
   return (
     <div className="bg-[#f1f1f1] px-6 pt-4 pb-6 ">
-      <span className="opacity-50 ">Go Back</span>
+      <span
+        onClick={() => navigate(-1)}
+        className="opacity-50 active:underline hover:underline "
+      >
+        Go Back
+      </span>
 
       <form className=" mt-6">
         <div className="bg-white  p-6">
@@ -34,7 +53,7 @@ export default function Checkout() {
             <label className="text-[12px] ">Phone Number</label>
             <input
               className="border h-14 border-[#cfcfcf] rounded-lg text-[14px] pl-6 "
-              type="Number"
+              type="text"
               placeholder="+1 202-555-0136"
             />
           </div>
@@ -126,22 +145,57 @@ export default function Checkout() {
         <div className="mt-8 py-8 px-6 bg-white flex flex-col">
           <h3 className=" text-[18px] font-medium ">SUMMARY</h3>
 
+          {cart.map((items) => (
+            <div key={items.id} className=" mt-8">
+              <div className="flex items-center justify-between ">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-[#f1f1f1] rounded-xl flex justify-center items-center ">
+                    <img className="w-9 h-10" src={items.image} alt="" />
+                  </div>
+
+                  <div className="flex flex-col  ">
+                    <span className="font-bold text-[15px] text-left ">
+                      {items.name}{" "}
+                    </span>
+                    <span className="opacity-50 font-bold text-[15px] ">
+                      ${Number(items.price).toLocaleString()}
+                    </span>
+                  </div>
+                </div>
+
+                <div>
+                  <span className="text-[15px] font-bold opacity-50 ">
+                    x{items.quantity}
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
+
           <div className=" flex flex-col  mt-8 gap-2">
             <div className="flex justify-between">
               <span className="opacity-50 text-[15px] ">TOTAL</span>
-              <span className="font-medium text-[18px] ">$</span>
+              <span className="font-medium text-[18px] ">
+                ${total.toLocaleString()}
+              </span>
             </div>
             <div className="flex justify-between">
               <span className="opacity-50 text-[15px] ">SHIPPING</span>
-              <span className="font-medium text-[18px] ">$</span>
+              <span className="font-medium text-[18px] ">
+                ${shipping.toLocaleString()}
+              </span>
             </div>
             <div className="flex justify-between">
               <span className="opacity-50 text-[15px] ">VAT INCLUDED</span>
-              <span className="font-medium text-[18px] ">$</span>
+              <span className="font-medium text-[18px] ">
+                ${vat.toLocaleString()}
+              </span>
             </div>
             <div className="flex justify-between">
               <span className="opacity-50 text-[15px] ">GRAND TOTAL</span>
-              <span className="font-medium text-[18px] ">$</span>
+              <span className="font-medium text-[18px] ">
+                ${grandTotal.toLocaleString()}
+              </span>
             </div>
           </div>
 

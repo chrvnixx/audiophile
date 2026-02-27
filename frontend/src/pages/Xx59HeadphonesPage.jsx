@@ -149,16 +149,19 @@ export default function Xx59HeadphonesPage() {
               image={headphones}
               shadow={shadow}
               ChevronRight={ChevronRight}
+              linkto="/headphones"
             />
             <ProductCard
               image={speaker}
               shadow={shadow}
               ChevronRight={ChevronRight}
+              linkto="/speakers"
             />
             <ProductCard
               image={earphones}
               shadow={shadow}
               ChevronRight={ChevronRight}
+              linkto="/earphones"
             />
           </div>
         </div>

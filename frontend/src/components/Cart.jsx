@@ -1,10 +1,18 @@
 import { XIcon } from "@phosphor-icons/react";
 import React from "react";
 import { useCart } from "./CartContext";
+import { useNavigate } from "react-router";
 
 export default function Cart({ setOpenCart }) {
   const { cart, total, decreaseQuantity, increaseQuantity, removeAll } =
     useCart();
+
+  const navigate = useNavigate();
+
+  function handleCheckout() {
+    setOpenCart(false);
+    navigate("/checkout");
+  }
 
   return (
     <div className="relative bg-white w-327 mx-6 px-7 py-8 max-h-[70vh] overflow-y-auto rounded-xl ">
@@ -67,7 +75,10 @@ export default function Cart({ setOpenCart }) {
       </div>
 
       <div className="w-full flex justify-center">
-        <button className="bg-[#d87d4a] text-[13px] text-white py-3 w-67 mt-6 ">
+        <button
+          onClick={handleCheckout}
+          className="bg-[#d87d4a] text-[13px] text-white py-3 w-67 mt-6 "
+        >
           CHECKOUT
         </button>
       </div>
