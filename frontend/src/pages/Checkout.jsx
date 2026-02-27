@@ -3,18 +3,21 @@ import BrownButton from "../components/BrownButton";
 import { useCart } from "../components/CartContext";
 import { useNavigate } from "react-router";
 
-export default function Checkout() {
+export default function Checkout({
+  setOpenConfirmationModal,
+  grandTotal,
+  setGrandTotal,
+}) {
   const navigate = useNavigate();
   const { cart, total } = useCart();
   const [vat, setVat] = useState(0);
   const [shipping, setShipping] = useState(0);
-  const [grandTotal, setGrandTotal] = useState(0);
 
   useEffect(() => {
     setVat((total * 10) / 100);
     setShipping(cart.length * 20);
     setGrandTotal(total + vat + shipping);
-  }, [total]);
+  }, [cart, total]);
 
   const [isHidden, setIsHidden] = useState(true);
 
@@ -26,6 +29,10 @@ export default function Checkout() {
     }
   };
 
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
   return (
     <div className="bg-[#f1f1f1] px-6 pt-4 pb-6 ">
       <span
@@ -35,7 +42,7 @@ export default function Checkout() {
         Go Back
       </span>
 
-      <form className=" mt-6">
+      <form onSubmit={handleSubmit} className=" mt-6">
         <div className="bg-white  p-6">
           <h2 className="font-medium text-[28px] mb-8">CHECKOUT</h2>
 
@@ -48,6 +55,7 @@ export default function Checkout() {
             <input
               className="border h-14 border-[#cfcfcf] rounded-lg text-[14px] pl-6 "
               type="text"
+              required
               placeholder="Alexei Ward"
             />
           </div>
@@ -56,6 +64,7 @@ export default function Checkout() {
             <input
               className="border h-14 border-[#cfcfcf] rounded-lg text-[14px] pl-6 "
               type="text"
+              required
               placeholder="alexei@gmail.com"
             />
           </div>
@@ -64,6 +73,7 @@ export default function Checkout() {
             <input
               className="border h-14 border-[#cfcfcf] rounded-lg text-[14px] pl-6 "
               type="text"
+              required
               placeholder="+1 202-555-0136"
             />
           </div>
@@ -77,6 +87,7 @@ export default function Checkout() {
             <input
               className="border h-14 border-[#cfcfcf] rounded-lg text-[14px] pl-6 "
               type="text"
+              required
               placeholder="1137 Williams Avenue"
             />
           </div>
@@ -85,6 +96,7 @@ export default function Checkout() {
             <input
               className="border h-14 border-[#cfcfcf] rounded-lg text-[14px] pl-6 "
               type="text"
+              required
               placeholder="10001"
             />
           </div>
@@ -93,6 +105,7 @@ export default function Checkout() {
             <input
               className="border h-14 border-[#cfcfcf] rounded-lg text-[14px] pl-6 "
               type="text"
+              required
               placeholder="New York"
             />
           </div>
@@ -101,6 +114,7 @@ export default function Checkout() {
             <input
               className="border h-14 border-[#cfcfcf] rounded-lg text-[14px] pl-6 "
               type="text"
+              required
               placeholder="United States"
             />
           </div>
@@ -130,6 +144,7 @@ export default function Checkout() {
             <div className="border border-[#cfcfcf] h-14 rounded-lg flex items-center gap-4 pl-5 ">
               <input
                 type="radio"
+                required
                 name="payment"
                 value="payment2"
                 onChange={(e) => handleRadioChange(e.target.value)}
@@ -220,6 +235,7 @@ export default function Checkout() {
 
           <div className="flex justify-center text-white">
             <button
+              onClick={() => setOpenConfirmationModal(true)}
               type="submit"
               className="bg-[#d87d4a] w-full  py-3.75 text-[13px] mt-7 tracking-wider  "
             >

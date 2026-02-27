@@ -11,9 +11,7 @@ import Xx99Mark1Page from "./pages/Xx99Mark1Page";
 import Zx9SpeakerPage from "./pages/Zx9SpeakerPage";
 import Zx7SpeakerPage from "./pages/Zx7SpeakerPage";
 import Yx1EarphonePage from "./pages/Yx1EarphonePage";
-
 import { useState } from "react";
-
 import Checkout from "./pages/Checkout";
 import CartModal from "./components/CartModal";
 import Cart from "./components/Cart";
@@ -21,10 +19,14 @@ import MenuModal from "./components/MenuModal";
 import Menu from "./components/Menu";
 import ScrollToTop from "./components/ScrollToTop";
 import Xx59HeadphonesPage from "./pages/Xx59HeadphonesPage";
+import ConfirmationModal from "./components/ConfirmationModal";
+import OrderConfirmation from "./components/OrderConfirmation";
 
 function App() {
   const [openCart, setOpenCart] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
+  const [openConfirmationModal, setOpenConfirmationModal] = useState(false);
+  const [grandTotal, setGrandTotal] = useState(0);
 
   return (
     <>
@@ -39,13 +41,30 @@ function App() {
           <Menu setOpenMenu={setOpenMenu} />
         </MenuModal>
 
+        <ConfirmationModal openConfirmationModal={openConfirmationModal}>
+          <OrderConfirmation
+            grandTotal={grandTotal}
+            setGrandTotal={setGrandTotal}
+            setOpenConfirmationModal={setOpenConfirmationModal}
+          />
+        </ConfirmationModal>
+
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/headphones" element={<HeadphonesPage />} />
           <Route path="/speakers" element={<SpeakersPage />} />
           <Route path="/earphones" element={<EarphonesPage />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route
+            path="/checkout"
+            element={
+              <Checkout
+                setOpenConfirmationModal={setOpenConfirmationModal}
+                setGrandTotal={setGrandTotal}
+                grandTotal={grandTotal}
+              />
+            }
+          />
 
           <Route path="/headphones/xx99-mark-two" element={<Xx99Mark2Page />} />
           <Route path="/headphones/xx99-mark-one" element={<Xx99Mark1Page />} />
