@@ -32,17 +32,19 @@ export default function Cart({ setOpenCart }) {
       {cart.map((items) => (
         <div key={items.id} className=" mt-8">
           <div className="flex items-center justify-between ">
-            <div className="w-16 h-16 bg-[#f1f1f1] rounded-xl flex justify-center items-center ">
-              <img className="w-9 h-10" src={items.image} alt="" />
-            </div>
+            <div className="flex gap-4 items-center">
+              <div className="w-16 h-16 bg-[#f1f1f1] rounded-xl flex justify-center items-center ">
+                <img className="w-9 h-10" src={items.image} alt="" />
+              </div>
 
-            <div className="flex flex-col  ">
-              <span className="font-bold text-[15px] text-left ">
-                {items.name}{" "}
-              </span>
-              <span className="opacity-50 font-bold text-[15px] ">
-                ${Number(items.price).toLocaleString()}
-              </span>
+              <div className="flex flex-col  ">
+                <span className="font-bold text-[15px] text-left ">
+                  {items.name}{" "}
+                </span>
+                <span className="opacity-50 font-bold text-[15px] ">
+                  ${Number(items.price).toLocaleString()}
+                </span>
+              </div>
             </div>
 
             <div>

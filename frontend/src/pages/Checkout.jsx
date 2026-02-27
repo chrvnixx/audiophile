@@ -12,9 +12,19 @@ export default function Checkout() {
 
   useEffect(() => {
     setVat((total * 10) / 100);
-    setShipping(cart.length * 10);
+    setShipping(cart.length * 20);
     setGrandTotal(total + vat + shipping);
   }, [total]);
+
+  const [isHidden, setIsHidden] = useState(true);
+
+  const handleRadioChange = (value) => {
+    if (value === "payment2") {
+      return setIsHidden(true);
+    } else {
+      return setIsHidden(false);
+    }
+  };
 
   return (
     <div className="bg-[#f1f1f1] px-6 pt-4 pb-6 ">
@@ -108,6 +118,8 @@ export default function Checkout() {
               <input
                 type="radio"
                 name="payment"
+                value="payment1"
+                onChange={(e) => handleRadioChange(e.target.value)}
                 className="accent-[#d87d4a] "
               />
               <span className="text-[14px]">e-Money</span>
@@ -119,27 +131,34 @@ export default function Checkout() {
               <input
                 type="radio"
                 name="payment"
+                value="payment2"
+                onChange={(e) => handleRadioChange(e.target.value)}
                 className="accent-[#d87d4a] "
               />
               <span className="text-[14px]">Cash on Delivery</span>
             </div>
-
-            <div className="mt-4 flex flex-col gap-2">
-              <label className="text-[12px] ">e-Money Number</label>
-              <input
-                className="border h-14 border-[#cfcfcf] rounded-lg text-[14px] pl-6 "
-                type="text"
-                placeholder="238521993"
-              />
-            </div>
-            <div className="mt-4 flex flex-col gap-2">
-              <label className="text-[12px] ">e-Money Pin</label>
-              <input
-                className="border h-14 border-[#cfcfcf] rounded-lg text-[14px] pl-6 "
-                type="text"
-                placeholder="6891"
-              />
-            </div>
+            {isHidden ? (
+              ""
+            ) : (
+              <div>
+                <div className="mt-4 flex flex-col gap-2">
+                  <label className="text-[12px] ">e-Money Number</label>
+                  <input
+                    className="border h-14 border-[#cfcfcf] rounded-lg text-[14px] pl-6 "
+                    type="text"
+                    placeholder="238521993"
+                  />
+                </div>
+                <div className="mt-4 flex flex-col gap-2">
+                  <label className="text-[12px] ">e-Money Pin</label>
+                  <input
+                    className="border h-14 border-[#cfcfcf] rounded-lg text-[14px] pl-6 "
+                    type="text"
+                    placeholder="6891"
+                  />
+                </div>
+              </div>
+            )}
           </div>
         </div>
         <div className="mt-8 py-8 px-6 bg-white flex flex-col">
