@@ -17,9 +17,20 @@ import EndStatement from "../components/EndStatement";
 
 import ProductCard2 from "../components/ProductCard2";
 import { useNavigate } from "react-router";
+import { useCart } from "../components/CartContext";
 
 export default function Xx99Mark1Page() {
   const navigate = useNavigate();
+
+  const { quantity, setQuantity, addToCart } = useCart();
+
+  const product = {
+    id: 1,
+    name: "XX99 MK I",
+    image: xx99,
+    quantity: quantity,
+    price: 1750,
+  };
 
   return (
     <div className=" relative flex flex-col items-center py-5">
@@ -52,7 +63,11 @@ export default function Xx99Mark1Page() {
 
           <span className="mt-6 font-bold">$ 1,750</span>
 
-          <CheckoutButtons />
+          <CheckoutButtons
+            onClick={() => addToCart(product)}
+            quantity={quantity}
+            setQuantity={setQuantity}
+          />
 
           <h2 className="font-semibold text-[24px] tracking-widest mt-22 text-black">
             FEATURES

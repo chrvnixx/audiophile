@@ -17,9 +17,19 @@ import EndStatement from "../components/EndStatement";
 
 import ProductCard2 from "../components/ProductCard2";
 import { useNavigate } from "react-router";
+import { useCart } from "../components/CartContext";
 
 export default function Zx7SpeakerPage() {
   const navigate = useNavigate();
+  const { quantity, setQuantity, addToCart } = useCart();
+
+  const product = {
+    id: 5,
+    name: "ZX7",
+    image: zx7,
+    quantity: quantity,
+    price: 3500,
+  };
   return (
     <div className=" relative flex flex-col items-center py-5">
       <span
@@ -54,7 +64,11 @@ export default function Zx7SpeakerPage() {
 
           <span className="mt-6 font-bold">$ 3,500</span>
 
-          <CheckoutButtons />
+          <CheckoutButtons
+            onClick={() => addToCart(product)}
+            quantity={quantity}
+            setQuantity={setQuantity}
+          />
 
           <h2 className="font-semibold text-[24px] tracking-widest mt-22 text-black">
             FEATURES
@@ -124,9 +138,17 @@ export default function Zx7SpeakerPage() {
         </h2>
 
         <div className="flex flex-col items-center mt-10 text-white gap-14">
-          <ProductCard2 image={mark2} product="XX99 MARK I" />
-          <ProductCard2 image={xx59} product="XX59" />
-          <ProductCard2 image={zx9} product="ZX9 SPEAKER" />
+          <ProductCard2
+            image={mark2}
+            product="XX99 MARK I"
+            linkto="/headphones/xx99-mark-one"
+          />
+          <ProductCard2 image={xx59} product="XX59" linkto="/headphones/xx59" />
+          <ProductCard2
+            image={zx9}
+            product="ZX9 SPEAKER"
+            linkto="speakers/zx9"
+          />
         </div>
 
         <div className="mt-30 text-black ">
@@ -135,16 +157,19 @@ export default function Zx7SpeakerPage() {
               image={headphones}
               shadow={shadow}
               ChevronRight={ChevronRight}
+              linkto="/headphones"
             />
             <ProductCard
               image={speaker}
               shadow={shadow}
               ChevronRight={ChevronRight}
+              linkto="/speakers"
             />
             <ProductCard
               image={earphones}
               shadow={shadow}
               ChevronRight={ChevronRight}
+              linkto="/earphones"
             />
           </div>
         </div>

@@ -17,9 +17,20 @@ import shadow from "../assets/landing page/shadow.png";
 import speaker from "../assets/landing page/speaker.png";
 import earphones from "../assets/landing page/earphones.png";
 import { useNavigate } from "react-router";
+import { useCart } from "../components/CartContext";
 
 export default function Xx59HeadphonesPage() {
   const navigate = useNavigate();
+
+  const { quantity, setQuantity, addToCart } = useCart();
+
+  const product = {
+    id: 3,
+    name: "X59",
+    image: xx59H,
+    quantity: quantity,
+    price: 899,
+  };
   return (
     <div className=" relative flex flex-col items-center py-5">
       <span
@@ -51,7 +62,11 @@ export default function Xx59HeadphonesPage() {
 
           <span className="mt-6 font-bold">$ 899</span>
 
-          <CheckoutButtons />
+          <CheckoutButtons
+            onClick={() => addToCart(product)}
+            quantity={quantity}
+            setQuantity={setQuantity}
+          />
 
           <h2 className="font-semibold text-[24px] tracking-widest mt-22 text-black">
             FEATURES
@@ -115,9 +130,17 @@ export default function Xx59HeadphonesPage() {
         </h2>
 
         <div className="flex flex-col items-center mt-10 text-white gap-14">
-          <ProductCard2 image={mark2} product="XX99 MARK I" />
-          <ProductCard2 image={xx59} product="XX59" />
-          <ProductCard2 image={zx9} product="ZX9 SPEAKER" />
+          <ProductCard2
+            image={mark2}
+            product="XX99 MARK I"
+            linkto="/headphones/xx99-mark-one"
+          />
+          <ProductCard2 image={xx59} product="XX59" linkto="" />
+          <ProductCard2
+            image={zx9}
+            product="ZX9 SPEAKER"
+            linkto="/speakers/zx9"
+          />
         </div>
 
         <div className="mt-30 text-black ">

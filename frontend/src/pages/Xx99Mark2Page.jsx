@@ -28,7 +28,7 @@ export default function Xx99Mark2Page() {
     name: "XX99 MK II",
     image: xx99,
     quantity: quantity,
-    price: "$2,999",
+    price: 2999,
   };
 
   return (
