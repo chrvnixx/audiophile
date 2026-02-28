@@ -9,7 +9,7 @@ import { Link } from "react-router";
 export default function Menu({ setOpenMenu }) {
   return (
     <div className="mt-30 ">
-      <div className="relative bg-white/70 backdrop-blur-xs px-10 pt-10 pb-5 flex flex-col items-center rounded-lg ">
+      <div className="relative bg-white backdrop-blur-xs px-10 pt-10 pb-5 flex flex-col items-center rounded-lg ">
         <div className="absolute top-3">
           <XIcon onClick={() => setOpenMenu(false)} color="#d87d4a" size="20" />
         </div>

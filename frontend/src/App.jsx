@@ -26,7 +26,6 @@ function App() {
   const [openCart, setOpenCart] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   const [openConfirmationModal, setOpenConfirmationModal] = useState(false);
-  const [grandTotal, setGrandTotal] = useState(0);
 
   return (
     <>
@@ -43,8 +42,6 @@ function App() {
 
         <ConfirmationModal openConfirmationModal={openConfirmationModal}>
           <OrderConfirmation
-            grandTotal={grandTotal}
-            setGrandTotal={setGrandTotal}
             setOpenConfirmationModal={setOpenConfirmationModal}
           />
         </ConfirmationModal>

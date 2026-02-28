@@ -3,21 +3,13 @@ import BrownButton from "../components/BrownButton";
 import { useCart } from "../components/CartContext";
 import { useNavigate } from "react-router";
 
-export default function Checkout({
-  setOpenConfirmationModal,
-  grandTotal,
-  setGrandTotal,
-}) {
+export default function Checkout({ setOpenConfirmationModal }) {
   const navigate = useNavigate();
   const { cart, total } = useCart();
-  const [vat, setVat] = useState(0);
-  const [shipping, setShipping] = useState(0);
 
-  useEffect(() => {
-    setVat((total * 10) / 100);
-    setShipping(cart.length * 20);
-    setGrandTotal(total + vat + shipping);
-  }, [cart, total]);
+  const vat = (total * 10) / 100;
+  const shipping = cart.length * 20;
+  const grandTotal = total + vat + shipping;
 
   const [isHidden, setIsHidden] = useState(true);
 

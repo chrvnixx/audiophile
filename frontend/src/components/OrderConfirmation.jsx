@@ -35,15 +35,15 @@ export default function OrderConfirmation({
           <div className="flex flex-col gap-3  items-center justify-between -">
             <div className="flex gap-14 ">
               <div className="flex justify-between gap-5 items-center">
-                <img className="w-7 h-8" src={cart[0].image} alt="" />
+                <img className="w-7 h-8" src={cart[0]?.image} alt="" />
                 <div className="flex flex-col text-[15px] font-bold">
-                  <span>{cart[0].name}</span>
+                  <span>{cart[0]?.name}</span>
                   <span className="opacity-50">
-                    ${cart[0].price.toLocaleString()}
+                    ${cart[0]?.price.toLocaleString()}
                   </span>
                 </div>
               </div>
-              <span className="font-bold opacity-50">x{cart[0].quantity}</span>
+              <span className="font-bold opacity-50">x{cart[0]?.quantity}</span>
             </div>
 
             <hr className="border-0.5 w-full border-black/20" />
