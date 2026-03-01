@@ -18,6 +18,7 @@ import EndStatement from "../components/EndStatement";
 import ProductCard2 from "../components/ProductCard2";
 import { useNavigate } from "react-router";
 import { useCart } from "../components/CartContext";
+import toast from "react-hot-toast";
 
 export default function Zx7SpeakerPage() {
   const navigate = useNavigate();
@@ -30,6 +31,11 @@ export default function Zx7SpeakerPage() {
     quantity: quantity,
     price: 3500,
   };
+
+  function handleClick() {
+    addToCart(product);
+    toast.success(`${product.name} has been added to your cart`);
+  }
   return (
     <div className=" relative flex flex-col items-center py-5">
       <span
@@ -65,7 +71,7 @@ export default function Zx7SpeakerPage() {
           <span className="mt-6 font-bold">$ 3,500</span>
 
           <CheckoutButtons
-            onClick={() => addToCart(product)}
+            onClick={handleClick}
             quantity={quantity}
             setQuantity={setQuantity}
           />

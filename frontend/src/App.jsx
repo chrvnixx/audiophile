@@ -23,6 +23,7 @@ import ConfirmationModal from "./components/ConfirmationModal";
 import OrderConfirmation from "./components/OrderConfirmation";
 
 function App() {
+  const [grandTotal, setGrandTotal] = useState(0);
   const [openCart, setOpenCart] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   const [openConfirmationModal, setOpenConfirmationModal] = useState(false);
@@ -42,6 +43,7 @@ function App() {
 
         <ConfirmationModal openConfirmationModal={openConfirmationModal}>
           <OrderConfirmation
+            grandTotal={grandTotal}
             setOpenConfirmationModal={setOpenConfirmationModal}
           />
         </ConfirmationModal>

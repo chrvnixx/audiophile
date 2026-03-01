@@ -17,7 +17,7 @@ export default function OrderConfirmation({
   }
 
   return (
-    <div className="bg-white p-8 ">
+    <div className="bg-white p-8 rounded-xl ">
       <div className="w-16 h-16 rounded-full bg-[#d87d4a] flex justify-center items-center ">
         <CheckFatIcon size={30} weight="fill" color={"white"} />
       </div>
@@ -47,16 +47,19 @@ export default function OrderConfirmation({
             </div>
 
             <hr className="border-0.5 w-full border-black/20" />
-
-            <p className="text-[12px] opacity-50 font-bold ">
-              and {cart.length - 1} other item(s)
-            </p>
+            {cart.length < 2 ? (
+              ""
+            ) : (
+              <p className="text-[12px] opacity-50 font-bold ">
+                and {cart.length - 1} other item(s)
+              </p>
+            )}
           </div>
         </div>
 
         <div className="bg-black flex flex-col text-white p-6 gap-2">
           <span className="opacity-60">GRAND TOTAL</span>
-          <span>${grandTotal.toLocaleString()} </span>
+          <span className="font-bold">${grandTotal.toLocaleString()} </span>
         </div>
       </div>
       <div className="max-w-7xl mx-auto  text-white mt-6">

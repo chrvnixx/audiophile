@@ -4,7 +4,6 @@ import { useCart } from "./CartContext";
 import { useNavigate } from "react-router";
 
 export default function Cart({ setOpenCart }) {
-  const [isEmpty, setIsempty] = useState(false);
   const { cart, total, decreaseQuantity, increaseQuantity, removeAll } =
     useCart();
 

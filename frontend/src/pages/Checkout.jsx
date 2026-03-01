@@ -2,14 +2,58 @@ import React, { useEffect, useState } from "react";
 import BrownButton from "../components/BrownButton";
 import { useCart } from "../components/CartContext";
 import { useNavigate } from "react-router";
+import toast from "react-hot-toast";
 
-export default function Checkout({ setOpenConfirmationModal }) {
+export default function Checkout({
+  setOpenConfirmationModal,
+  grandTotal,
+  setGrandTotal,
+}) {
   const navigate = useNavigate();
   const { cart, total } = useCart();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    number: "",
+    address: "",
+    zip: "",
+    city: "",
+    country: "",
+  });
+
+  function handleChange(e) {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  }
+
+  const isFormValid = Boolean(
+    formData.name &&
+    formData.email &&
+    formData.number &&
+    formData.address &&
+    formData.zip &&
+    formData.city &&
+    formData.country,
+  );
+
+  function handleClick(e) {
+    e.preventDefault();
+    if (isFormValid) {
+      setOpenConfirmationModal(true);
+    } else {
+      toast.error("Fill in all your details");
+    }
+  }
+  console.log(isFormValid);
 
   const vat = (total * 10) / 100;
   const shipping = cart.length * 20;
-  const grandTotal = total + vat + shipping;
+
+  useEffect(() => {
+    setGrandTotal(vat + shipping + total);
+  }, [cart, total]);
 
   const [isHidden, setIsHidden] = useState(true);
 
@@ -45,6 +89,9 @@ export default function Checkout({ setOpenConfirmationModal }) {
           <div className="mt-4 flex flex-col gap-2">
             <label className="text-[12px] ">Name</label>
             <input
+              onChange={handleChange}
+              name="name"
+              value={formData.name}
               className="border h-14 border-[#cfcfcf] rounded-lg text-[14px] pl-6 "
               type="text"
               required
@@ -54,6 +101,9 @@ export default function Checkout({ setOpenConfirmationModal }) {
           <div className="mt-4 flex flex-col gap-2">
             <label className="text-[12px] ">Email Address</label>
             <input
+              onChange={handleChange}
+              name="email"
+              value={formData.email}
               className="border h-14 border-[#cfcfcf] rounded-lg text-[14px] pl-6 "
               type="text"
               required
@@ -63,6 +113,9 @@ export default function Checkout({ setOpenConfirmationModal }) {
           <div className="mt-4 flex flex-col gap-2 mb-8">
             <label className="text-[12px] ">Phone Number</label>
             <input
+              onChange={handleChange}
+              name="number"
+              value={formData.number}
               className="border h-14 border-[#cfcfcf] rounded-lg text-[14px] pl-6 "
               type="text"
               required
@@ -77,6 +130,9 @@ export default function Checkout({ setOpenConfirmationModal }) {
           <div className="mt-4 flex flex-col gap-2">
             <label className="text-[12px] ">Your Address </label>
             <input
+              onChange={handleChange}
+              name="address"
+              value={formData.address}
               className="border h-14 border-[#cfcfcf] rounded-lg text-[14px] pl-6 "
               type="text"
               required
@@ -86,6 +142,9 @@ export default function Checkout({ setOpenConfirmationModal }) {
           <div className="mt-4 flex flex-col gap-2">
             <label className="text-[12px] ">Zip Code </label>
             <input
+              onChange={handleChange}
+              name="zip"
+              value={formData.zip}
               className="border h-14 border-[#cfcfcf] rounded-lg text-[14px] pl-6 "
               type="text"
               required
@@ -95,6 +154,9 @@ export default function Checkout({ setOpenConfirmationModal }) {
           <div className="mt-4 flex flex-col gap-2">
             <label className="text-[12px] ">City </label>
             <input
+              onChange={handleChange}
+              name="city"
+              value={formData.city}
               className="border h-14 border-[#cfcfcf] rounded-lg text-[14px] pl-6 "
               type="text"
               required
@@ -104,6 +166,9 @@ export default function Checkout({ setOpenConfirmationModal }) {
           <div className="mt-4 flex flex-col gap-2 mb-8">
             <label className="text-[12px] ">Country</label>
             <input
+              onChange={handleChange}
+              name="country"
+              value={formData.country}
               className="border h-14 border-[#cfcfcf] rounded-lg text-[14px] pl-6 "
               type="text"
               required
@@ -227,7 +292,8 @@ export default function Checkout({ setOpenConfirmationModal }) {
 
           <div className="flex justify-center text-white">
             <button
-              onClick={() => setOpenConfirmationModal(true)}
+              // disabled={!isFormValid}
+              onClick={handleClick}
               type="submit"
               className="bg-[#d87d4a] w-full  py-3.75 text-[13px] mt-7 tracking-wider  "
             >

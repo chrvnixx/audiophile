@@ -17,6 +17,7 @@ import EndStatement from "../components/EndStatement";
 import ProductCard2 from "../components/ProductCard2";
 import { useNavigate } from "react-router";
 import { useCart } from "../components/CartContext";
+import toast from "react-hot-toast";
 
 export default function Xx99Mark2Page() {
   const navigate = useNavigate();
@@ -30,6 +31,11 @@ export default function Xx99Mark2Page() {
     quantity: quantity,
     price: 2999,
   };
+
+  function handleClick() {
+    addToCart(product);
+    toast.success(`${product.name} has been added to your cart`);
+  }
 
   return (
     <div className=" relative flex flex-col items-center py-5">
@@ -67,7 +73,7 @@ export default function Xx99Mark2Page() {
           <span className="mt-6 font-bold">$ 2,999</span>
 
           <CheckoutButtons
-            onClick={() => addToCart(product)}
+            onClick={handleClick}
             quantity={quantity}
             setQuantity={setQuantity}
           />
