@@ -1,4 +1,3 @@
-import React from "react";
 import model from "../assets/landing page/model.png";
 
 export default function EndStatement() {

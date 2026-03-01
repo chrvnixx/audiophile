@@ -1,4 +1,3 @@
-import React from "react";
 import BrownButton from "./BrownButton";
 
 export default function ProductCardCategory({

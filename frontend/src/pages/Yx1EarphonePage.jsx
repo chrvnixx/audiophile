@@ -1,4 +1,3 @@
-import React from "react";
 import yx1 from "../assets/yx1 page/yx1.png";
 import img1 from "../assets/yx1 page/img1.png";
 import img2 from "../assets/yx1 page/img2.png";

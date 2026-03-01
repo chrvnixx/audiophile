@@ -1,5 +1,4 @@
 import { ShoppingCartSimpleIcon, XIcon } from "@phosphor-icons/react";
-import React, { useEffect, useState } from "react";
 import { useCart } from "./CartContext";
 import { useNavigate } from "react-router";
 

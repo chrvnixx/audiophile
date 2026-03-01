@@ -1,6 +1,5 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import logo from "../assets/landing page/audiophileLogo.png";
-import React from "react";
 import { useNavigate } from "react-router";
 
 export default function Footer() {

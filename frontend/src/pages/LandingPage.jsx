@@ -1,4 +1,3 @@
-import React from "react";
 import markII from "../assets/landing page/XX99 MARK II.png";
 import BrownButton from "../components/BrownButton";
 import headphones from "../assets/landing page/headphones.png";
@@ -12,7 +11,6 @@ import BlackButton from "../components/BlackButton";
 import zx7 from "../assets/landing page/zx7.png";
 import TransparentButton from "../components/TransparentButton";
 import yx1 from "../assets/landing page/yx1.png";
-import model from "../assets/landing page/model.png";
 import EndStatement from "../components/EndStatement";
 import { Link } from "react-router";
 

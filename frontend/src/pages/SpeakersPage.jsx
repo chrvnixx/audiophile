@@ -1,4 +1,3 @@
-import React from "react";
 import zx9 from "../assets/speakers page/zx9.png";
 import zx7 from "../assets/speakers page/zx7.png";
 import BrownButton from "../components/BrownButton";

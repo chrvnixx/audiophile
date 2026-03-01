@@ -1,8 +1,3 @@
-import React from "react";
-import speaker from "../assets/landing page/speaker.png";
-import earphones from "../assets/landing page/earphones.png";
-import headphones from "../assets/landing page/headphones.png";
-import { ChevronRight } from "lucide-react";
 import { XIcon } from "@phosphor-icons/react";
 import { Link } from "react-router";
 

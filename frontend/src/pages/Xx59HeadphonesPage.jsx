@@ -1,4 +1,3 @@
-import React from "react";
 import xx59H from "../assets/xx59 page/xx59.png";
 import CheckoutButtons from "../components/CheckoutButtons";
 import ProductCard2 from "../components/ProductCard2";

@@ -1,7 +1,5 @@
 import { CheckFatIcon } from "@phosphor-icons/react";
-import React from "react";
 import { useCart } from "./CartContext";
-import BrownButton from "./BrownButton";
 import { useNavigate } from "react-router";
 
 export default function OrderConfirmation({

@@ -1,4 +1,3 @@
-import React from "react";
 import zx7 from "../assets/Zx7 page/zx7.png";
 import img1 from "../assets/zx7 page/img1.png";
 import img2 from "../assets/zx7 page/img2.png";

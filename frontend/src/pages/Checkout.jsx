@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import BrownButton from "../components/BrownButton";
 import { useCart } from "../components/CartContext";
 import { useNavigate } from "react-router";
 import toast from "react-hot-toast";
@@ -64,7 +63,6 @@ export default function Checkout({
       );
     }
   }
-  // console.log(isFormValid);
 
   const vat = (total * 10) / 100;
   const shipping = cart.length * 20;
@@ -300,7 +298,6 @@ export default function Checkout({
 
           <div className="flex justify-center text-white">
             <button
-              // disabled={!isFormValid}
               onClick={handleClick}
               type="submit"
               className="bg-[#d87d4a] w-full  py-3.75 text-[13px] mt-7 tracking-wider  "
