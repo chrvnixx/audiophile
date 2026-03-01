@@ -1,4 +1,4 @@
-import zx7 from "../assets/Zx7-page/zx7.png";
+import zx7 from "../assets/zx7-page/zx7.png";
 import img1 from "../assets/zx7-page/img1.png";
 import img2 from "../assets/zx7-page/img2.png";
 import img3 from "../assets/zx7-page/img3.png";
@@ -39,7 +39,7 @@ export default function Zx7SpeakerPage() {
     <div className=" relative flex flex-col items-center py-5">
       <span
         onClick={() => navigate(-1)}
-        className="absolute hover:underline left-6 opacity-50 cursor-pointer"
+        className="absolute hover:underline active:underline left-6 opacity-50 cursor-pointer"
       >
         Go Back
       </span>
