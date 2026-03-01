@@ -2,10 +2,10 @@ import React from "react";
 import yx1 from "../assets/earphones-page/yx1.png";
 import BrownButton from "../components/BrownButton";
 import { ChevronRight } from "lucide-react";
-import headphones from "../assets/landing page/headphones.png";
-import shadow from "../assets/landing page/shadow.png";
-import speaker from "../assets/landing page/speaker.png";
-import earphones from "../assets/landing page/earphones.png";
+import headphones from "../assets/landing-page/headphones.png";
+import shadow from "../assets/landing-page/shadow.png";
+import speaker from "../assets/landing-page/speaker.png";
+import earphones from "../assets/landing-page/earphones.png";
 import ProductCard from "../components/ProductCard";
 import EndStatement from "../components/EndStatement";
 

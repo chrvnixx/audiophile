@@ -3,8 +3,8 @@ import img1 from "../assets/yx1-page/img1.png";
 import img2 from "../assets/yx1-page/img2.png";
 import img3 from "../assets/yx1-page/img3.png";
 import mark2 from "../assets/xx99-mark-1-page/mark2.png";
-import xx59 from "../assets/xx99-mark-2 -age/xx59.png";
-import zx9 from "../assets/xx99-mark-2-page/zx9.png"-
+import xx59 from "../assets/xx99-mark-2-page/xx59.png";
+import zx9 from "../assets/xx99-mark-2-page/zx9.png";
 import CheckoutButtons from "../components/CheckoutButtons";
 import { ChevronRight } from "lucide-react";
 import headphones from "../assets/landing-page/headphones.png";

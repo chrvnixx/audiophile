@@ -1,4 +1,4 @@
-import model from "../assets/landing page/model.png";
+import model from "../assets/landing-page/model.png";
 
 export default function EndStatement() {
   return (

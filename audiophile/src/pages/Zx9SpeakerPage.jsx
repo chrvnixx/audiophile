@@ -7,7 +7,7 @@ import xx59 from "../assets/xx99-mark-2-page/xx59.png";
 import zx9 from "../assets/xx99-mark-2-page/zx9.png";
 import CheckoutButtons from "../components/CheckoutButtons";
 import { ChevronRight } from "lucide-react";
-import headphones from "../assets/landing page/headphones.png";
+import headphones from "../assets/landing-page/headphones.png";
 import shadow from "../assets/landing-page/shadow.png";
 import speaker from "../assets/landing-page/speaker.png";
 import earphones from "../assets/landing-page/earphones.png";
