@@ -18,13 +18,13 @@ export default function Menu({ setOpenMenu }) {
             to="/headphones"
             className="font-medium hover:text-[#d87d4a] hover:underline mb-2 "
           >
-            HEADPHONE
+            HEADPHONES
           </Link>
           <Link
             to="/speakers"
             className="font-medium hover:text-[#d87d4a] hover:underline mb-2 "
           >
-            SPEAKER
+            SPEAKERS
           </Link>
           <Link
             to="/earphones"

@@ -11,6 +11,8 @@ export default function Checkout({
 }) {
   const navigate = useNavigate();
   const { cart, total } = useCart();
+  const [payment, setPayment] = useState(false);
+  const [isHidden, setIsHidden] = useState(true);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -38,15 +40,31 @@ export default function Checkout({
     formData.country,
   );
 
+  const handleRadioChange = (value) => {
+    if (!value) {
+      return setPayment(false);
+    } else if (value === "payment2") {
+      setIsHidden(true);
+      setPayment(true);
+    } else {
+      setIsHidden(false);
+      setPayment(true);
+    }
+  };
+
+  console.log(payment);
+
   function handleClick(e) {
     e.preventDefault();
-    if (isFormValid) {
+    if (isFormValid && payment) {
       setOpenConfirmationModal(true);
     } else {
-      toast.error("Fill in all your details");
+      toast.error(
+        "Fill in all your details & choose a preferred payment method",
+      );
     }
   }
-  console.log(isFormValid);
+  // console.log(isFormValid);
 
   const vat = (total * 10) / 100;
   const shipping = cart.length * 20;
@@ -54,16 +72,6 @@ export default function Checkout({
   useEffect(() => {
     setGrandTotal(vat + shipping + total);
   }, [cart, total]);
-
-  const [isHidden, setIsHidden] = useState(true);
-
-  const handleRadioChange = (value) => {
-    if (value === "payment2") {
-      return setIsHidden(true);
-    } else {
-      return setIsHidden(false);
-    }
-  };
 
   function handleSubmit(e) {
     e.preventDefault();
