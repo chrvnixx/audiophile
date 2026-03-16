@@ -1,6 +1,5 @@
 import { Menu, ShoppingCart } from "lucide-react";
 import audiophileLogo from "../assets/landing-page/audiophileLogo.png";
-import React from "react";
 import { Link } from "react-router";
 
 export default function Navbar({ setOpenCart, setOpenMenu }) {
@@ -10,7 +9,7 @@ export default function Navbar({ setOpenCart, setOpenMenu }) {
         <Menu onClick={() => setOpenMenu(true)} className="size-6" />
 
         <Link to="/">
-          <img src={audiophileLogo} alt="" />
+          <img className="" src={audiophileLogo} alt="" />
         </Link>
 
         <ShoppingCart onClick={() => setOpenCart(true)} />

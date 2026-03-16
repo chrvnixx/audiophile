@@ -10,10 +10,14 @@ export default function ProductCard({
   return (
     <div>
       <div className="relative  flex flex-col items-center   pt-13 cursor-pointer ">
-        <div className="bg-[#f1f1f1] w-81.75 h-41.25 rounded-xl  "></div>
+        <div className="bg-[#f1f1f1] w-81.75 h-41.25 lg:w-87.5 lg:h-51  rounded-xl  "></div>
         <div className="absolute   top-0">
-          <div className="relative flex flex-col items-center ">
-            <img className="absolute" src={image} alt="" />
+          <div className="relative flex flex-col items-center  ">
+            <img
+              className="absolute lg:w-30 lg:h-35 lg:bottom-10"
+              src={image}
+              alt=""
+            />
             <img className="mt-12" src={shadow} alt="" />
 
             <div className="absolute top-33 flex flex-col justify-center items-center">
