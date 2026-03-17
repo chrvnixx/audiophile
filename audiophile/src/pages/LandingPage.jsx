@@ -1,4 +1,4 @@
-import markII from "../assets/landing-page/XX99 MARK II.png";
+import markII from "../assets/landing-page/XX99 MARK II.svg";
 import BrownButton from "../components/BrownButton";
 import headphones from "../assets/landing-page/headphones.png";
 import shadow from "../assets/landing-page/shadow.png";
@@ -33,8 +33,8 @@ export default function LandingPage() {
           <BrownButton text="SEE PRODUCT" linkto="/headphones/xx99-mark-two" />
         </div>
 
-        <div className=" overflow-hidden  flex justify-center lg:w-190 lg:h-190 lg:-mt-20 lg:ml-50 ">
-          <img className="-mt-18 ml-3  " src={markII} alt="" />
+        <div className="opacity-40 overflow-hidden  flex justify-center lg:flex lg:h-180 lg:justify-center lg:items-center  ">
+          <img className="-mt-18 ml-3 lg:h-221   " src={markII} alt="" />
         </div>
       </div>
 
