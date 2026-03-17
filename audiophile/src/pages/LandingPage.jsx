@@ -1,16 +1,16 @@
 import markII from "../assets/landing-page/XX99 MARK II.svg";
 import BrownButton from "../components/BrownButton";
-import headphones from "../assets/landing-page/headphones.png";
+import headphones from "../assets/landing-page/headphones.svg";
 import shadow from "../assets/landing-page/shadow.png";
 import { ChevronRight } from "lucide-react";
 import ProductCard from "../components/ProductCard";
-import speaker from "../assets/landing-page/speaker.png";
-import earphones from "../assets/landing-page/earphones.png";
-import zx9 from "../assets/landing-page/ZX9.png";
+import speaker from "../assets/landing-page/speaker.svg";
+import earphones from "../assets/landing-page/earphones.svg";
+import zx9 from "../assets/landing-page/ZX9.svg";
 import BlackButton from "../components/BlackButton";
-import zx7 from "../assets/landing-page/zx7.png";
+import zx7 from "../assets/landing-page/zx7.svg";
 import TransparentButton from "../components/TransparentButton";
-import yx1 from "../assets/landing-page/yx1.png";
+import yx1 from "../assets/landing-page/yx1.svg";
 import EndStatement from "../components/EndStatement";
 import { Link } from "react-router";
 
@@ -66,9 +66,9 @@ export default function LandingPage() {
         </div>
 
         <div className="bg-[#d87d4a] relative flex lg:gap-55 justify-center w-full  h-150 mt-35 text-white rounded-xl lg:w-7xl overflow-hidden">
-          <div className="border absolute bottom-42 lg:bottom-0 lg:left-0 border-white w-139.5 h-139.5 rounded-full opacity-20 lg:w-170 lg:h-170 "></div>
-          <div className="border absolute border-white w-80 h-80 lg:left-25 top-5 rounded-full opacity-20 lg:w-120 lg:h-120 "></div>
-          <div className="border absolute border-white w-70 h-70 lg:left-40 lg:top-20 rounded-full opacity-20 top-5 lg:w-90 lg:h-90 "></div>
+          <div className="border absolute bottom-42 lg:-bottom-30 lg:-left-20 border-white w-139.5 h-139.5 rounded-full opacity-20 lg:w-200 lg:h-200 "></div>
+          <div className="border absolute border-white w-80 h-80 lg:left-0 top-5 rounded-full opacity-20 lg:w-150 lg:h-150 "></div>
+          <div className="border absolute border-white w-70 h-70 lg:left-15 lg:top-20 rounded-full opacity-20 top-5 lg:w-120 lg:h-120 "></div>
 
           <div className="absolute top-13 lg:static lg:mt-40 z-2 ">
             <img className="lg:w-100 " src={zx9} alt="" />
@@ -87,22 +87,22 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <div className="relative h-80 rounded-xl overflow-hidden mt-6 flex justify-center w-full max-w-82">
-          <img src={zx7} alt="" />
-          <div className="absolute top-25 right-22">
-            <h2 className=" font-semibold text-[28px] tracking-widest">
+        <div className=" relative h-80 rounded-xl overflow-hidden mt-6 flex justify-center w-full  lg:w-7xl lg:mt-12 ">
+          <div className="absolute top-25 left-24">
+            <h2 className=" z-2 font-semibold text-[28px] tracking-widest lg:text-[28px]">
               ZX7 SPEAKER
             </h2>
             <TransparentButton text="SEE PRODUCT" linkto="/speakers/zx7" />
           </div>
+          <img className="lg:h-300 lg:-mt-160 " src={zx7} alt="" />
         </div>
 
-        <div className="w-full max-w-82 ">
-          <div className="w-82 rounded-xl overflow-hidden mt-6  ">
-            <img src={yx1} alt="yx1 earphones image" />
+        <div className="w-full  lg:flex lg:justify-center lg:gap-20 lg:mt-12 ">
+          <div className=" border lg:w-150 rounded-xl overflow-hidden mt-6  ">
+            <img className="lg:w-150" src={yx1} alt="yx1 earphones image" />
           </div>
-          <div className="bg-[#f1f1f1] flex items-center h-50 mt-6 rounded-xl">
-            <div className="pl-6 ">
+          <div className="bg-[#f1f1f1] flex items-center h-50 mt-6 rounded-xl lg:w-150 lg:h-89">
+            <div className="pl-6 lg:pl-25 ">
               <h2 className=" font-semibold text-[28px] tracking-widest">
                 YX1 EARPHONES
               </h2>

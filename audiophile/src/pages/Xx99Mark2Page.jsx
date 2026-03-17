@@ -1,4 +1,4 @@
-import xx99 from "../assets/headphones-page/xx99.png";
+import xx99 from "../assets/headphones-page/xx99.svg";
 import model2 from "../assets/xx99-mark-2-page/model2.png";
 import model3 from "../assets/xx99-mark-2-page/model3.png";
 import prodimage from "../assets/xx99-mark-2-page/prodimage.png";
@@ -7,10 +7,10 @@ import zx9 from "../assets/xx99-mark-2-page/zx9.png";
 
 import CheckoutButtons from "../components/CheckoutButtons";
 import { ChevronRight } from "lucide-react";
-import headphones from "../assets/landing-page/headphones.png";
+import headphones from "../assets/landing-page/headphones.svg";
 import shadow from "../assets/landing-page/shadow.png";
-import speaker from "../assets/landing-page/speaker.png";
-import earphones from "../assets/landing-page/earphones.png";
+import speaker from "../assets/landing-page/speaker.svg";
+import earphones from "../assets/landing-page/earphones.svg";
 import ProductCard from "../components/ProductCard";
 import EndStatement from "../components/EndStatement";
 

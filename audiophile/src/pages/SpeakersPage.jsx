@@ -3,10 +3,10 @@ import zx7 from "../assets/speakers-page/zx7.png";
 import BrownButton from "../components/BrownButton";
 import ProductCardCategory from "../components/ProductCardCategory";
 import { ChevronRight } from "lucide-react";
-import headphones from "../assets/landing-page/headphones.png";
+import headphones from "../assets/landing-page/headphones.svg";
 import shadow from "../assets/landing-page/shadow.png";
-import speaker from "../assets/landing-page/speaker.png";
-import earphones from "../assets/landing-page/earphones.png";
+import speaker from "../assets/landing-page/speaker.svg";
+import earphones from "../assets/landing-page/earphones.svg";
 import ProductCard from "../components/ProductCard";
 import EndStatement from "../components/EndStatement";
 
