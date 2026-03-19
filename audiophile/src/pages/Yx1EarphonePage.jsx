@@ -44,103 +44,111 @@ export default function Yx1EarphonePage() {
         Go Back
       </span>
 
-      <div className="w-82 flex flex-col mt-16 ">
-        <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl  ">
+      <div className=" flex flex-col mt-16 ">
+        <div className="lg:flex lg:justify-center lg:w-377 lg:gap-65 lg:items-center ">
+          <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl lg:w-140 lg:h-140  ">
+            <div>
+              <img src={yx1} alt="yx1 earphones image" />
+            </div>
+          </div>
+
           <div>
-            <img src={yx1} alt="yx1 earphones image" />
+            <span className=" tracking-[0.6em] font-light  text-[#d87d4a] text-[14px] ">
+              NEW PRODUCT
+            </span>
+            <h2 className=" font-semibold text-[28px] tracking-widest mt-6 text-black lg:text-[40px] ">
+              YX1 WIRELESS <br />
+              EARPHONES
+            </h2>
+
+            <p className="text-[15px]  opacity-50  mt-8 text-black lg:mb-4 ">
+              Tailor your listening experience with bespoke <br />
+              dynamic drivers from the new YX1 Wireless <br />
+              Earphones. Enjoy incredible high-fidelity <br />
+              sound even in noisy environments with its <br />
+              active noise cancellation feature.
+            </p>
+
+            <span className="mt-6 font-bold ">$ 599</span>
+
+            <CheckoutButtons
+              onClick={handleClick}
+              quantity={quantity}
+              setQuantity={setQuantity}
+            />
           </div>
         </div>
-        <div className="flex flex-col  mt-8">
-          <span className=" tracking-[0.6em] font-light  text-[#d87d4a] text-[14px] ">
-            NEW PRODUCT
-          </span>
-          <h2 className=" font-semibold text-[28px] tracking-widest mt-6 text-black ">
-            YX1 WIRELESS <br />
-            EARPHONES
-          </h2>
 
-          <p className="text-[15px]  opacity-50  mt-8 text-black ">
-            Tailor your listening experience with bespoke <br />
-            dynamic drivers from the new YX1 Wireless <br />
-            Earphones. Enjoy incredible high-fidelity <br />
-            sound even in noisy environments with its <br />
-            active noise cancellation feature.
-          </p>
+        <div className="flex flex-col  mt-8 lg:flex-row lg:justify-center lg:gap-65 ">
+          <div>
+            <h2 className="font-semibold text-[24px] tracking-widest mt-22 text-black lg:text-[32px] ">
+              FEATURES
+            </h2>
 
-          <span className="mt-6 font-bold">$ 599</span>
+            <p className="text-[15px]  opacity-50  mt-6 text-black lg:w-159">
+              Experience unrivalled stereo sound thanks to innovative acoustic
+              technology. With improved ergonomics designed for full day
+              wearing, these revolutionary earphones have been finely crafted to
+              provide you with the perfect fit, delivering complete comfort all
+              day long while enjoying exceptional noise isolation and truly
+              immersive sound.
+              <br />
+              <span className="mt-4">
+                The YX1 Wireless Earphones features customizable controls for
+                volume, music, calls, and voice assistants built into both
+                earbuds. The new 7-hour battery life can be extended up to 28
+                hours with the charging case, giving you uninterrupted play
+                time. Exquisite craftsmanship with a splash resistant design now
+                available in an all new white and grey color scheme as well as
+                the popular classic black.
+              </span>
+            </p>
+          </div>
 
-          <CheckoutButtons
-            onClick={handleClick}
-            quantity={quantity}
-            setQuantity={setQuantity}
-          />
-
-          <h2 className="font-semibold text-[24px] tracking-widest mt-22 text-black">
-            FEATURES
-          </h2>
-
-          <p className="text-[15px]  opacity-50  mt-6 text-black">
-            Experience unrivalled stereo sound thanks to <br />
-            innovative acoustic technology. With improved <br />
-            ergonomics designed for full day wearing, <br />
-            these revolutionary earphones have been <br />
-            finely crafted to provide you with the perfect <br />
-            fit, delivering complete comfort all day long <br /> while enjoying
-            exceptional noise isolation and <br />
-            truly immersive sound.
-            <span className="mt-4">
-              The YX1 Wireless Earphones features <br />
-              customizable controls for volume, music, calls,
-              <br /> and voice assistants built into both earbuds. <br />
-              The new 7-hour battery life can be extended <br /> up to 28 hours
-              with the charging case, giving <br />
-              you uninterrupted play time. Exquisite <br />
-              craftsmanship with a splash resistant design <br />
-              now available in an all new white and grey color <br />
-              scheme as well as the popular classic black.
-            </span>
-          </p>
-
-          <h2 className="font-semibold text-[24px] tracking-widest mt-22 text-black">
-            IN THE BOX
-          </h2>
-          <div className="flex flex-col text-15px gap-3 mt-4  ">
-            <div className="flex items-center gap-5">
-              <span className="text-[#d87d4a]">2x</span>
-              <span className="opacity-50">Earphone Unit</span>
-            </div>
-            <div className="flex items-center gap-5">
-              <span className="text-[#d87d4a]">6x</span>
-              <span className="opacity-50">Multi-size Earplugs </span>
-            </div>
-            <div className="flex items-center gap-5">
-              <span className="text-[#d87d4a]">1x</span>
-              <span className="opacity-50">User Manual</span>
-            </div>
-            <div className="flex items-center gap-5">
-              <span className="text-[#d87d4a]">1x</span>
-              <span className="opacity-50">Usb-C Charging Cable</span>
-            </div>
-            <div className="flex items-center gap-5">
-              <span className="text-[#d87d4a]">1x</span>
-              <span className="opacity-50"> Travel Pouch</span>
+          <div>
+            <h2 className="font-semibold text-[24px] tracking-widest mt-22 text-black">
+              IN THE BOX
+            </h2>
+            <div className="flex flex-col text-15px gap-3 mt-4  ">
+              <div className="flex items-center gap-5">
+                <span className="text-[#d87d4a]">2x</span>
+                <span className="opacity-50">Earphone Unit</span>
+              </div>
+              <div className="flex items-center gap-5">
+                <span className="text-[#d87d4a]">6x</span>
+                <span className="opacity-50">Multi-size Earplugs </span>
+              </div>
+              <div className="flex items-center gap-5">
+                <span className="text-[#d87d4a]">1x</span>
+                <span className="opacity-50">User Manual</span>
+              </div>
+              <div className="flex items-center gap-5">
+                <span className="text-[#d87d4a]">1x</span>
+                <span className="opacity-50">Usb-C Charging Cable</span>
+              </div>
+              <div className="flex items-center gap-5">
+                <span className="text-[#d87d4a]">1x</span>
+                <span className="opacity-50"> Travel Pouch</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className=" flex flex-col gap-5 mt-22">
-        <img className="rounded-xl" src={img1} alt="" />
-        <img className="rounded-xl" src={img2} alt="" />
+      <div className=" flex flex-col gap-5 mt-22 lg:flex-row lg:gap-10">
+        <div className="lg:flex lg:flex-col lg:gap-10">
+          <img className="rounded-xl" src={img1} alt="" />
+          <img className="rounded-xl" src={img2} alt="" />
+        </div>
         <img className="rounded-xl" src={img3} alt="" />
       </div>
 
       <div>
-        <h2 className="font-semibold text-[24px] tracking-widest mt-30 text-black text-center">
+        <h2 className="font-semibold text-[24px] tracking-widest mt-30 text-black text-center lg:mt-40">
           YOU MAY ALSO LIKE
         </h2>
 
-        <div className="flex flex-col items-center mt-10 text-white gap-14">
+        <div className="flex flex-col items-center mt-10 text-white gap-14 lg:flex-row lg:justify-center">
           <ProductCard2
             image={mark2}
             product="XX99 MARK II"
@@ -154,8 +162,8 @@ export default function Yx1EarphonePage() {
           />
         </div>
 
-        <div className="mt-30 text-black ">
-          <div className="flex flex-col items-center gap-4 w-full max-w-82">
+        <div className="mt-30 text-black flex justify-center lg:mt-40">
+          <div className="flex flex-col items-center gap-4 w-full max-w-82 lg:flex-row lg:justify-center">
             <ProductCard
               image={headphones}
               shadow={shadow}

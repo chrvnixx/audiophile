@@ -82,7 +82,7 @@ export default function Zx9SpeakerPage() {
 
         <div className="flex flex-col  mt-8 lg:flex-row lg:justify-center lg:gap-65">
           <div>
-            <h2 className="font-semibold text-[24px] tracking-widest mt-22 text-black">
+            <h2 className="font-semibold text-[24px] tracking-widest mt-22 text-black lg:text-[32px]">
               FEATURES
             </h2>
 
@@ -106,7 +106,7 @@ export default function Zx9SpeakerPage() {
           </div>
 
           <div>
-            <h2 className="font-semibold text-[24px] tracking-widest mt-22 text-black">
+            <h2 className="font-semibold text-[24px] tracking-widest mt-22 text-black lg:text-[32px]">
               IN THE BOX
             </h2>
 
@@ -145,7 +145,7 @@ export default function Zx9SpeakerPage() {
       </div>
 
       <div>
-        <h2 className="font-semibold text-[24px] tracking-widest mt-30 text-black text-center lg:mt-40">
+        <h2 className="font-semibold text-[24px] tracking-widest mt-30 text-black text-center lg:mt-40 lg:text-[32px]">
           YOU MAY ALSO LIKE
         </h2>
 

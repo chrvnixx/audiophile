@@ -43,7 +43,7 @@ export default function EarphonesPage() {
         </div>
       </div>
 
-      <div className="mt-30 text-black ">
+      <div className="mt-30 text-black lg:mt-40 ">
         <div className="flex flex-col items-center gap-4 w-full max-w-82 lg:flex-row lg:justify-center lg:gap-10  ">
           <ProductCard
             image={headphones}
