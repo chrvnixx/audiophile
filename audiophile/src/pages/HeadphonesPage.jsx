@@ -2,8 +2,8 @@ import React from "react";
 import xx99 from "../assets/headphones-page/xx99.svg";
 import BrownButton from "../components/BrownButton";
 import ProductCardCategory from "../components/ProductCardCategory";
-import mark1 from "../assets/headphones-page/mark1.png";
-import xx59 from "../assets/headphones-page/xx59.png";
+import mark1 from "../assets/headphones-page/mark1.svg";
+import xx59 from "../assets/headphones-page/xx59.svg";
 import { ChevronRight } from "lucide-react";
 import headphones from "../assets/landing-page/headphones.svg";
 import shadow from "../assets/landing-page/shadow.png";
@@ -16,33 +16,37 @@ export default function HeadphonesPage() {
   return (
     <div className=" flex flex-col items-center text-white ">
       <div className="bg-[#000000] flex flex-col items-center w-full px-21 py-8 ">
-        <h2 className="text-[28px] ">HEADPHONES</h2>
+        <h2 className="text-[28px] lg:text-[40px] ">HEADPHONES</h2>
       </div>
 
-      <div className="w-82 flex flex-col mt-16 ">
-        <div className="bg-[#f1f1f1] h-88 flex justify-center items-center  ">
+      <div className=" w-82 flex flex-col mt-16 lg:w-378 lg:flex-row lg:justify-center lg:items-center lg:gap-65 lg:mt-40 ">
+        <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl lg:h-140 lg:w-140 ">
           <div>
             <img src={xx99} alt="xx99 mark 2 headphones image" />
           </div>
         </div>
-        <div className="flex flex-col items-center mt-8">
-          <span className=" tracking-[0.6em] font-light ml-3 text-[#d87d4a] text-[14px] ">
+        <div className="flex flex-col items-center mt-8 lg:items-start lg:mt-0 ">
+          <span className=" tracking-[0.6em] font-light ml-3 text-[#d87d4a] text-[14px] lg:text-start ">
             NEW PRODUCT
           </span>
 
-          <h2 className=" font-semibold text-[28px] tracking-widest mt-6 text-black ">
+          <h2 className=" font-semibold text-[28px] tracking-widest mt-6 text-black lg:text-[40px] ">
             XX99 MARK II <br />
             HEADPHONES
           </h2>
 
-          <p className="text-[15px]  opacity-50 text-center mt-8 text-black ">
+          <p className="text-[15px]  opacity-50 text-center mt-8 text-black lg:text-start lg:mb-2 ">
             The new XX99 Mark II headphones is the <br />
             pinnacle of pristine audio. It redefines your <br />
             premium headphone experience by <br />
             reproducing the balanced depth and precision <br />
             of studio-quality sound.
           </p>
-          <BrownButton text="SEE PRODUCT" linkto="/headphones/xx99-mark-two" />
+          <BrownButton
+            className="mt-10"
+            text="SEE PRODUCT"
+            linkto="/headphones/xx99-mark-two"
+          />
         </div>
       </div>
 
@@ -69,8 +73,8 @@ export default function HeadphonesPage() {
         linkto="/headphones/xx59"
       />
 
-      <div className="mt-30 text-black ">
-        <div className="flex flex-col items-center gap-4 w-full max-w-82">
+      <div className="mt-30 lg:mt-40 text-black ">
+        <div className="flex flex-col items-center w-full max-w-82 lg:flex-row lg:justify-center lg:gap-10 ">
           <ProductCard
             image={headphones}
             shadow={shadow}
