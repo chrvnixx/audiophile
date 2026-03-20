@@ -18,14 +18,14 @@ export default function LandingPage() {
   return (
     <div className="w-full ">
       <div className="bg-[#000000] flex flex-col lg:flex-row lg:gap-16 items-center w-full h-140 relative text-white lg:px-71 lg:h-182 ">
-        <div className="absolute top-26 flex flex-col items-center lg:static lg:justify-start lg:flex lg:flex-col lg:items-start  ">
+        <div className="absolute top-26 z-2 flex flex-col items-center lg:static lg:justify-start lg:flex lg:flex-col lg:items-start  ">
           <span className=" opacity-50 tracking-[0.6em] font-light ml-3 ">
             NEW PRODUCT
           </span>
-          <h1 className="text-[36px] mt-4 text-center leading-10 font-bold tracking-[0.05em] lg:text-[56px] lg:w-99 lg:leading-15 ">
+          <h1 className="text-[36px] mt-4 text-center leading-10 font-bold tracking-[0.05em] lg:text-[56px] lg:text-start lg:w-105 lg:leading-15 ">
             XX99 MARK II HEADPHONES
           </h1>
-          <p className="text-center mt-6 leading-7 tracking-wide font-light opacity-75 lg:text-[15px] lg:text-start lg:w-87">
+          <p className="text-center mt-6 leading-7 tracking-wide font-light opacity-75 w-82 lg:text-[15px] lg:text-start lg:w-87">
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
@@ -33,12 +33,12 @@ export default function LandingPage() {
           <BrownButton text="SEE PRODUCT" linkto="/headphones/xx99-mark-two" />
         </div>
 
-        <div className="opacity-40 overflow-hidden  flex justify-center lg:flex lg:h-180 lg:justify-center lg:items-center  ">
-          <img className="-mt-18 ml-3 lg:h-221   " src={markII} alt="" />
+        <div className="opacity-40 overflow-hidden flex h-100 justify-center lg:flex lg:h-180 lg:justify-center lg:items-center  ">
+          <img className="-mt-18 lg:h-221 " src={markII} alt="" />
         </div>
       </div>
 
-      <div className="flex flex-col items-center mt-10 px-6 lg:mt-30 ">
+      <div className="flex flex-col items-center mt-10 px-6  lg:mt-30 ">
         <div className="flex flex-col items-center gap-4 w-full max-w-82 lg:flex lg:flex-row lg:justify-center lg:gap-30 ">
           <ProductCard
             image={headphones}
@@ -65,20 +65,20 @@ export default function LandingPage() {
           />
         </div>
 
-        <div className="bg-[#d87d4a] relative flex lg:gap-55 justify-center w-full  h-150 mt-35 text-white rounded-xl lg:w-7xl overflow-hidden">
+        <div className="bg-[#d87d4a] relative flex lg:gap-55 justify-center w-full  h-150 mt-35 text-white rounded-xl lg:w-7xl lg:mt-42 overflow-hidden">
           <div className="border absolute bottom-42 lg:-bottom-30 lg:-left-20 border-white w-139.5 h-139.5 rounded-full opacity-20 lg:w-200 lg:h-200 "></div>
-          <div className="border absolute border-white w-80 h-80 lg:left-0 top-5 rounded-full opacity-20 lg:w-150 lg:h-150 "></div>
-          <div className="border absolute border-white w-70 h-70 lg:left-15 lg:top-20 rounded-full opacity-20 top-5 lg:w-120 lg:h-120 "></div>
+          <div className="border absolute border-white w-80 h-80  lg:left-0 rounded-full opacity-20 lg:w-150 lg:h-150 "></div>
+          <div className="border absolute border-white w-70 h-70  lg:left-15 lg:top-20 rounded-full opacity-20 top-5 lg:w-120 lg:h-120 "></div>
 
           <div className="absolute top-13 lg:static lg:mt-40 z-2 ">
-            <img className="lg:w-100 " src={zx9} alt="" />
+            <img className="w-45 lg:w-100 " src={zx9} alt="" />
           </div>
 
           <div className="flex flex-col justify-center items-center mt-60 lg:flex lg:flex-col lg:items-start lg:justify-start">
             <h2 className="text-4xl lg:text-[56px] text-center font-semibold tracking-wider mb-6 mt-2 w-40 lg:w-60 lg:text-start lg:-mt-13  ">
               ZX9 SPEAKER
             </h2>
-            <p className="text-center font-light opacity-75 w-60 lg:w-87 lg:text-start ">
+            <p className="text-center font-light opacity-75 w-70 lg:w-87 lg:text-start ">
               Upgrade to premium speakers that are phenomenally built to deliver
               truly remarkable sound.
             </p>
@@ -87,14 +87,14 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <div className=" relative h-80 rounded-xl overflow-hidden mt-6 flex justify-center w-full  lg:w-7xl lg:mt-12 ">
+        <div className=" border border-green-700 relative h-80 rounded-xl overflow-hidden mt-6 flex justify-center w-full  lg:w-7xl lg:mt-12 ">
           <div className="absolute top-25 left-24">
             <h2 className=" z-2 font-semibold text-[28px] tracking-widest lg:text-[28px]">
               ZX7 SPEAKER
             </h2>
             <TransparentButton text="SEE PRODUCT" linkto="/speakers/zx7" />
           </div>
-          <img className="lg:h-300 lg:-mt-160 " src={zx7} alt="" />
+          <img className=" lg:h-300 lg:-mt-160 " src={zx7} alt="" />
         </div>
 
         <div className="w-full  lg:flex lg:justify-center lg:gap-20 lg:mt-12 ">
@@ -110,9 +110,8 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-
-        <EndStatement />
       </div>
+      <EndStatement />
     </div>
   );
   0;

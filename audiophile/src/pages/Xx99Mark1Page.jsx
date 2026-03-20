@@ -48,10 +48,14 @@ export default function Xx99Mark1Page() {
       </span>
 
       <div className="w-82 flex flex-col mt-16 lg:w-377 ">
-        <div className="flex lg:flex-row lg:justify-center lg:gap-65 lg:items-center">
+        <div className="flex flex-col lg:flex-row lg:justify-center lg:gap-65 lg:items-center">
           <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl lg:h-140 lg:w-140   ">
             <div>
-              <img src={mark1} alt="xx99 mark 1 headphones image" />
+              <img
+                className="w-50"
+                src={mark1}
+                alt="xx99 mark 1 headphones image"
+              />
             </div>
           </div>
           <div>
@@ -60,7 +64,7 @@ export default function Xx99Mark1Page() {
               HEADPHONES
             </h2>
 
-            <p className="text-[15px]  opacity-50  mt-8 text-black lg:mb-4 lg:mt-0 ">
+            <p className="text-[15px]  opacity-50  mt-8 text-black mb-4 lg:mb-4 lg:mt-0 ">
               As the gold standard for headphones, the <br />
               classic XX99 Mark I offers detailed and <br />
               accurate audio reproduction for audiophiles, <br />
@@ -133,7 +137,7 @@ export default function Xx99Mark1Page() {
       </div>
 
       <div className=" flex flex-col gap-5 mt-22 lg:flex-row lg:gap-10 ">
-        <div className="lg:flex lg:flex-col lg:gap-10">
+        <div className="flex flex-col gap-5 lg:flex lg:flex-col lg:gap-10">
           <img className="rounded-xl" src={img1} alt="" />
           <img className="rounded-xl" src={img2} alt="" />
         </div>

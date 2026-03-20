@@ -22,7 +22,11 @@ export default function HeadphonesPage() {
       <div className=" w-82 flex flex-col mt-16 lg:w-378 lg:flex-row lg:justify-center lg:items-center lg:gap-65 lg:mt-40 ">
         <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl lg:h-140 lg:w-140 ">
           <div>
-            <img src={xx99} alt="xx99 mark 2 headphones image" />
+            <img
+              className="w-50"
+              src={xx99}
+              alt="xx99 mark 2 headphones image"
+            />
           </div>
         </div>
         <div className="flex flex-col items-center mt-8 lg:items-start lg:mt-0 ">
@@ -74,7 +78,7 @@ export default function HeadphonesPage() {
       />
 
       <div className="mt-30 lg:mt-40 text-black ">
-        <div className="flex flex-col items-center w-full max-w-82 lg:flex-row lg:justify-center lg:gap-10 ">
+        <div className="flex flex-col items-center gap-4 w-full max-w-82 lg:flex-row lg:justify-center lg:gap-10 ">
           <ProductCard
             image={headphones}
             shadow={shadow}

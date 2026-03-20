@@ -2,7 +2,7 @@ import model from "../assets/landing-page/model.svg";
 
 export default function EndStatement() {
   return (
-    <div className="mt-30 text-black lg:flex lg:justify-center lg:items-center lg:gap-50 lg:mt-40 ">
+    <div className="mt-30 text-black mx-6 lg:flex lg:justify-center lg:items-center lg:gap-50 lg:mt-40 ">
       <div className="rounded-xl overflow-hidden lg:float-end">
         <img src={model} alt="man wearing headphone" />
       </div>

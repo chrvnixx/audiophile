@@ -1,5 +1,5 @@
 import { Menu, ShoppingCart } from "lucide-react";
-import audiophileLogo from "../assets/landing-page/audiophileLogo.png";
+import audiophileLogo from "../assets/landing-page/audiophileLogo.svg";
 import { Link } from "react-router";
 
 export default function Navbar({ setOpenCart, setOpenMenu }) {

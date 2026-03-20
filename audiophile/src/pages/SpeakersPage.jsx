@@ -20,7 +20,7 @@ export default function SpeakersPage() {
       <div className="w-82 flex flex-col mt-16 lg:w-378 lg:flex-row lg:justify-center lg:items-center lg:gap-65 lg:mt-40 lg:pl-25 ">
         <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl lg:w-135 lg:h-140 ">
           <div>
-            <img className="lg:w-72" src={zx9} alt="zx9  speaker image" />
+            <img className="w-50 lg:w-72" src={zx9} alt="zx9  speaker image" />
           </div>
         </div>
         <div className="flex flex-col items-center mt-8 text-white lg:items-start lg:mt-0 ">

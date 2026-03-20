@@ -36,10 +36,10 @@ export default function Yx1EarphonePage() {
     toast.success(`${product.name} has been added to your cart`);
   }
   return (
-    <div className=" relative flex flex-col items-center py-5">
+    <div className=" relative flex flex-col items-center py-5 lg:mt-20">
       <span
         onClick={() => navigate(-1)}
-        className="absolute hover:underline left-6 opacity-50 cursor-pointer"
+        className="absolute hover:underline left-6 opacity-50 cursor-pointer lg:left-88"
       >
         Go Back
       </span>

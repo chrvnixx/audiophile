@@ -14,7 +14,7 @@ export default function ProductCard({
         <div className="absolute   top-0">
           <div className="relative flex flex-col items-center  ">
             <img
-              className="absolute lg:w-30 lg:h-35 lg:bottom-10"
+              className="absolute w-25 h-25 lg:w-30 lg:h-35 lg:bottom-10"
               src={image}
               alt=""
             />

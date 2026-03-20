@@ -46,16 +46,20 @@ export default function Xx99Mark2Page() {
         Go Back
       </span>
 
-      <div className="w-82 flex flex-col mt-16 lg:items-center  ">
+      <div className="w-82 flex flex-col mt-16 lg:items-center ">
         <div className="lg:w-378 lg:flex lg:gap-65 lg:justify-center lg:items-center  ">
-          <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl lg:h-140 lg:w-140   ">
+          <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl  mb-4 lg:h-140 lg:w-140   ">
             <div>
-              <img src={xx99} alt="xx99 mark 2 headphones image" />
+              <img
+                className="w-50"
+                src={xx99}
+                alt="xx99 mark 2 headphones image"
+              />
             </div>
           </div>
 
           <div>
-            <span className=" tracking-[0.6em] font-light  text-[#d87d4a] text-[14px] ">
+            <span className=" tracking-[0.6em] font-light   text-[#d87d4a] text-[14px] ">
               NEW PRODUCT
             </span>
 
@@ -64,7 +68,7 @@ export default function Xx99Mark2Page() {
               HEADPHONES
             </h2>
 
-            <p className="text-[15px]  opacity-50  mt-8 text-black lg:mb-8 ">
+            <p className="text-[15px]  opacity-50  mt-8 text-black  mb-4 lg:mb-8 ">
               The new XX99 Mark II headphones is the <br />
               pinnacle of pristine audio. It redefines your <br />
               premium headphone experience by <br />
@@ -136,16 +140,16 @@ export default function Xx99Mark2Page() {
         </div>
       </div>
 
-      <div className=" flex flex-col gap-5 mt-22 lg:flex-row">
-        <div className="lg:flex lg:flex-col lg:gap-8">
-          <div className=" overflow-hidden rounded-xl lg:w-111 lg:h-70">
-            <img className="lg:w-122 lg:-mt-10 " src={model} alt="" />
+      <div className=" flex flex-col gap-5 mt-22 items-center px-6 lg:flex-row">
+        <div className="flex flex-col gap-5 lg:flex lg:flex-col  lg:gap-8">
+          <div className="border border-green-600 flex w-82 h-50  overflow-hidden rounded-xl lg:w-111 lg:h-70">
+            <img className="w-92 h-52 lg:w-122 lg:-mt-10 " src={model} alt="" />
           </div>
           <div className=" overflow-hidden rounded-xl lg:w-111 lg:h-70">
-            <img className="lg:h-80 lg:w-150 lg:-mt-10 " src={model3} alt="" />
+            <img className="lg:h-82  lg:w-150 lg:-mt-10 " src={model3} alt="" />
           </div>
         </div>
-        <img className="rounded-xl" src={prodimage} alt="" />
+        <img className="h-92 rounded-xl" src={prodimage} alt="" />
       </div>
 
       <div>
