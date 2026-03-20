@@ -44,11 +44,11 @@ export default function Zx7SpeakerPage() {
         Go Back
       </span>
 
-      <div className=" flex flex-col mt-16 ">
+      <div className=" flex flex-col mt-16 px-6 ">
         <div className="lg:flex lg:justify-center lg:w-377 lg:gap-65 lg:items-center">
           <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl lg:w-140 lg:h-140  ">
             <div>
-              <img src={zx7} alt="zx7 speaker image" />
+              <img className="w-50" src={zx7} alt="zx7 speaker image" />
             </div>
           </div>
 
@@ -58,11 +58,11 @@ export default function Zx7SpeakerPage() {
               SPEAKER
             </h2>
 
-            <p className="text-[15px]  opacity-50  mt-8 text-black lg:mb-4 ">
+            <p className="text-[15px]  opacity-50  mt-8 text-black mb-4 lg:mb-4 ">
               Upgrade your sound system with the all new <br />
               ZX9 active speaker. It’s a bookshelf speaker <br />
-              system that offers truly wireless connectivity <br />- creating
-              new possibilities for more pleasing <br />
+              system that offers truly wireless connectivity <br /> creating new
+              possibilities for more pleasing <br />
               and practical audio setups.
             </p>
 
@@ -137,10 +137,10 @@ export default function Zx7SpeakerPage() {
       </div>
 
       <div className=" flex flex-col gap-5 mt-22 lg:flex-row lg:gap-10">
-        <di className="lg:flex lg:flex-col lg:gap-10">
+        <div className="flex flex-col gap-5 lg:flex lg:flex-col lg:gap-10">
           <img className="rounded-xl" src={img1} alt="" />
           <img className="rounded-xl" src={img2} alt="" />
-        </di>
+        </div>
         <img className="rounded-xl" src={img3} alt="" />
       </div>
 
@@ -163,7 +163,7 @@ export default function Zx7SpeakerPage() {
           />
         </div>
 
-        <div className="mt-30 text-black lg:flex lg:justify-center lg:mt-40 ">
+        <div className="flex justify-center mt-30 text-black lg:flex-row lg:justify-center lg:mt-40 ">
           <div className="flex flex-col items-center gap-4 w-full max-w-82 lg:flex-row lg:justify-center">
             <ProductCard
               image={headphones}

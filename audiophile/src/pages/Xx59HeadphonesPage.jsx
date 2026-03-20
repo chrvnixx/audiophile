@@ -46,10 +46,14 @@ export default function Xx59HeadphonesPage() {
       </span>
 
       <div className="w-82 flex flex-col mt-16 lg:w-377 ">
-        <div className="flex lg:flex-row lg:justify-center lg:gap-65 lg:items-center">
+        <div className="flex flex-col lg:flex-row lg:justify-center lg:gap-65 lg:items-center">
           <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl lg:h-140 lg:w-140   ">
             <div>
-              <img src={xx59H} alt="xx99 mark 1 headphones image" />
+              <img
+                className="w-50"
+                src={xx59H}
+                alt="xx99 mark 1 headphones image"
+              />
             </div>
           </div>
 
@@ -59,7 +63,7 @@ export default function Xx59HeadphonesPage() {
               HEADPHONES
             </h2>
 
-            <p className="text-[15px]  opacity-50  mt-8 text-black lg:mb-4 ">
+            <p className="text-[15px]  opacity-50  mt-8 text-black mb-4 lg:mb-4  ">
               As the gold standard for headphones, the <br />
               classic XX99 Mark I offers detailed and <br />
               accurate audio reproduction for audiophiles, <br />
@@ -133,7 +137,7 @@ export default function Xx59HeadphonesPage() {
       </div>
 
       <div className=" flex flex-col gap-5 mt-22 lg:flex-row">
-        <div className="lg:flex lg:flex-col lg:gap-10">
+        <div className="flex flex-col gap-5 lg:flex lg:flex-col lg:gap-10">
           <img className="rounded-xl" src={img1} alt="" />
           <img className="rounded-xl" src={img2} alt="" />
         </div>
@@ -159,7 +163,7 @@ export default function Xx59HeadphonesPage() {
           />
         </div>
 
-        <div className="mt-30 text-black lg:flex lg:justify-center lg:mt-40 ">
+        <div className="flex justify-center mt-30 text-black lg:flex lg:justify-center lg:mt-40 ">
           <div className="flex flex-col items-center gap-4 w-full max-w-82 lg:flex-row lg:justify-center">
             <ProductCard
               image={headphones}

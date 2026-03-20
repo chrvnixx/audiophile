@@ -14,9 +14,13 @@ export default function Cart({ setOpenCart }) {
   }
 
   return (
-    <div className="relative bg-white w-327 mx-6 px-7 py-8 max-h-[70vh] overflow-y-auto rounded-xl ">
-      <div className="opacity-50 absolute right-7 top-3">
-        <XIcon onClick={() => setOpenCart(false)} size={20} color="#d87d4a" />
+    <div className="relative bg-white w-327 mx-6 px-7 py-8 mt-20 max-h-[70vh] overflow-y-auto rounded-xl lg:w-94 lg:ml-250 lg:mt-30 ">
+      <div className="opacity-50 hover:opacity-100 absolute right-7 top-3">
+        <XIcon
+          onClick={() => setOpenCart(false)}
+          size={25}
+          className="text-[#d87d4a] hover:text-red-600 "
+        />
       </div>
       {cart.length === 0 ? (
         <div className="flex flex-col items-center gap-4">

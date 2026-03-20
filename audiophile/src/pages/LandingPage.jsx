@@ -17,7 +17,7 @@ import { Link } from "react-router";
 export default function LandingPage() {
   return (
     <div className="w-full ">
-      <div className="bg-[#000000] flex flex-col lg:flex-row lg:gap-16 items-center w-full h-140 relative text-white lg:px-71 lg:h-182 ">
+      <div className="bg-[#000000] flex flex-col lg:flex-row lg:gap-20 items-center w-full h-140 relative text-white lg:px-71 lg:h-182 ">
         <div className="absolute top-26 z-2 flex flex-col items-center lg:static lg:justify-start lg:flex lg:flex-col lg:items-start  ">
           <span className=" opacity-50 tracking-[0.6em] font-light ml-3 ">
             NEW PRODUCT

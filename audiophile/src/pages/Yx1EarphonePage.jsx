@@ -44,11 +44,11 @@ export default function Yx1EarphonePage() {
         Go Back
       </span>
 
-      <div className=" flex flex-col mt-16 ">
+      <div className=" flex flex-col mt-16 px-6 ">
         <div className="lg:flex lg:justify-center lg:w-377 lg:gap-65 lg:items-center ">
-          <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl lg:w-140 lg:h-140  ">
+          <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl mb-4 lg:w-140 lg:h-140  ">
             <div>
-              <img src={yx1} alt="yx1 earphones image" />
+              <img className="w-50 " src={yx1} alt="yx1 earphones image" />
             </div>
           </div>
 
@@ -61,7 +61,7 @@ export default function Yx1EarphonePage() {
               EARPHONES
             </h2>
 
-            <p className="text-[15px]  opacity-50  mt-8 text-black lg:mb-4 ">
+            <p className="text-[15px]  opacity-50  mt-8 text-black mb-4 lg:mb-4 ">
               Tailor your listening experience with bespoke <br />
               dynamic drivers from the new YX1 Wireless <br />
               Earphones. Enjoy incredible high-fidelity <br />
@@ -136,7 +136,7 @@ export default function Yx1EarphonePage() {
       </div>
 
       <div className=" flex flex-col gap-5 mt-22 lg:flex-row lg:gap-10">
-        <div className="lg:flex lg:flex-col lg:gap-10">
+        <div className="flex flex-col gap-5 lg:flex lg:flex-col lg:gap-10">
           <img className="rounded-xl" src={img1} alt="" />
           <img className="rounded-xl" src={img2} alt="" />
         </div>

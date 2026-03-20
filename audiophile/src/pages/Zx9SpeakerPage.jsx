@@ -37,7 +37,7 @@ export default function Zx9SpeakerPage() {
   }
 
   return (
-    <div className=" relative flex flex-col items-center py-5 lg:mt-20">
+    <div className=" relative flex flex-col items-center  py-5 lg:mt-20">
       <span
         onClick={() => navigate(-1)}
         className="absolute cursor-pointer hover:underline left-6 opacity-50 lg:left-92 "
@@ -45,11 +45,15 @@ export default function Zx9SpeakerPage() {
         Go Back
       </span>
 
-      <div className=" flex flex-col mt-16 ">
+      <div className=" flex flex-col mt-16 px-6 ">
         <div className="lg:flex lg:justify-center lg:w-377 lg:gap-65 lg:items-center ">
-          <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl lg:h-140 lg:w-140  ">
+          <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl mb-4 lg:h-140 lg:w-140  ">
             <div>
-              <img className="h-100" src={zx9main} alt="zx9 speaker image" />
+              <img
+                className="w-50 lg:h-100"
+                src={zx9main}
+                alt="zx9 speaker image"
+              />
             </div>
           </div>
 
@@ -62,11 +66,11 @@ export default function Zx9SpeakerPage() {
               SPEAKER
             </h2>
 
-            <p className="text-[15px]  opacity-50  mt-8 text-black lg:mb-4 ">
+            <p className="text-[15px]  opacity-50  mt-8 text-black mb-4 lg:mb-4  ">
               Upgrade your sound system with the all new <br />
               ZX9 active speaker. It’s a bookshelf speaker <br />
-              system that offers truly wireless connectivity <br />- creating
-              new possibilities for more pleasing <br />
+              system that offers truly wireless connectivity <br /> creating new
+              possibilities for more pleasing <br />
               and practical audio setups.
             </p>
 
@@ -137,7 +141,7 @@ export default function Zx9SpeakerPage() {
       </div>
 
       <div className=" flex flex-col gap-5 mt-22 lg:flex-row lg:gap-10">
-        <div className="lg:flex lg:flex-col lg:gap-10">
+        <div className="flex flex-col gap-5 lg:flex lg:flex-col lg:gap-10">
           <img className="rounded-xl" src={img1} alt="" />
           <img className="rounded-xl" src={img2} alt="" />
         </div>

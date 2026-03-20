@@ -163,7 +163,7 @@ export default function Xx99Mark1Page() {
           />
         </div>
 
-        <div className="mt-30 text-black lg:mt-40 lg:flex lg:justify-center ">
+        <div className="mt-30 text-black flex justify-center lg:mt-40 lg:flex lg:justify-center ">
           <div className="flex flex-col items-center gap-4 w-full max-w-82 lg:flex-row lg:justify-center ">
             <ProductCard
               image={headphones}
