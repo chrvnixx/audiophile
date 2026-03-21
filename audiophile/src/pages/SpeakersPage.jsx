@@ -1,4 +1,4 @@
-import zx9 from "../assets/landing-page/ZX9.svg";
+import zx9 from "../assets/landing-page/zx9.svg";
 import zx7 from "../assets/speakers-page/zx7.svg";
 import BrownButton from "../components/BrownButton";
 import ProductCardCategory from "../components/ProductCardCategory";

@@ -4,7 +4,7 @@ import img3 from "../assets/zx9-page/img3.png";
 import mark2 from "../assets/xx99-mark-1-page/mark2.svg";
 import xx59 from "../assets/xx99-mark-2-page/xx59.svg";
 import zx9 from "../assets/xx99-mark-2-page/zx9.svg";
-import zx9main from "../assets/landing-page/ZX9.svg";
+import zx9main from "../assets/landing-page/zx9.svg";
 import CheckoutButtons from "../components/CheckoutButtons";
 import { ChevronRight } from "lucide-react";
 import headphones from "../assets/landing-page/headphones.svg";
