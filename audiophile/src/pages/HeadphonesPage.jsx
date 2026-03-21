@@ -23,7 +23,7 @@ export default function HeadphonesPage() {
         <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl lg:h-140 lg:w-140 ">
           <div>
             <img
-              className="w-50"
+              className="w-50 lg:w-auto "
               src={xx99}
               alt="xx99 mark 2 headphones image"
             />

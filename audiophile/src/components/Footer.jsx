@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="flex justify-center lg:flex lg:flex-col  ">
           <div
             onClick={() => navigate("/")}
-            className="flex justify-center mt-13 lg:mt-19"
+            className="flex justify-center mt-13 lg:mt-19 lg:justify-start"
           >
             <img src={logo} alt="logo" />
           </div>
@@ -31,16 +31,36 @@ export default function Footer() {
 
         <div className="lg:flex lg:flex-col  lg:items-end lg:gap-26 ">
           <div className="mt-12 flex flex-col items-center gap-4 text-[13px] font-semibold tracking-widest lg:flex-row lg:gap-6 lg:mt-19 ">
-            <span onClick={() => navigate("/")}>HOME</span>
-            <span onClick={() => navigate("/headphones")}>HEADPHONES</span>
-            <span onClick={() => navigate("/speakers")}>SPEAKERS</span>
-            <span onClick={() => navigate("/earphones")}>EARPHONES</span>
+            <span
+              onClick={() => navigate("/")}
+              className="hover:text-[#d87d4a] cursor-pointer"
+            >
+              HOME
+            </span>
+            <span
+              onClick={() => navigate("/headphones")}
+              className="hover:text-[#d87d4a] cursor-pointer"
+            >
+              HEADPHONES
+            </span>
+            <span
+              onClick={() => navigate("/speakers")}
+              className="hover:text-[#d87d4a] cursor-pointer"
+            >
+              SPEAKERS
+            </span>
+            <span
+              onClick={() => navigate("/earphones")}
+              className="hover:text-[#d87d4a] cursor-pointer"
+            >
+              EARPHONES
+            </span>
           </div>
 
           <div className=" hidden  mt-12 mb-15  justify-between gap-4 w-30 lg:flex ">
-            <Facebook />
-            <Twitter />
-            <Instagram />
+            <Facebook className="hover:text-[#d87d4a] cursor-pointer  " />
+            <Twitter className="hover:text-[#d87d4a] cursor-pointer  " />
+            <Instagram className="hover:text-[#d87d4a] cursor-pointer  " />
           </div>
         </div>
 

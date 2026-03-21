@@ -19,7 +19,11 @@ export default function EarphonesPage() {
       <div className="w-82 flex flex-col mt-16 lg:w-378 lg:flex-row lg:justify-center lg:items-center lg:gap-65 lg:mt-40 ">
         <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl lg:h-140 lg:w-140  ">
           <div>
-            <img className="w-50" src={yx1} alt="yx1  earphone image" />
+            <img
+              className="w-50 lg:w-auto "
+              src={yx1}
+              alt="yx1  earphone image"
+            />
           </div>
         </div>
         <div className="flex flex-col items-center mt-8 text-white lg:items-start lg:mt-0 ">

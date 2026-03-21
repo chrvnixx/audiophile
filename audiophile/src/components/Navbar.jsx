@@ -4,11 +4,11 @@ import { Link } from "react-router";
 
 export default function Navbar({ setOpenCart, setOpenMenu }) {
   return (
-    <div className=" bg-[#000000] py-8 px-6 text-white border-b border-b-white/20">
+    <nav className=" bg-[#000000] py-8 px-6 text-white border-b border-b-white/20">
       <div className=" relative flex justify-between items-center">
         <Menu
           onClick={() => setOpenMenu(true)}
-          className="size-6 lg:invisible"
+          className="size-6 lg:invisible "
         />
 
         <Link to="/" className="lg:-ml-220">
@@ -32,9 +32,9 @@ export default function Navbar({ setOpenCart, setOpenMenu }) {
 
         <ShoppingCart
           onClick={() => setOpenCart(true)}
-          className=" lg:mr-60 lg:size-8"
+          className=" lg:mr-60 lg:size-8 hover:text-[#d87d4a] "
         />
       </div>
-    </div>
+    </nav>
   );
 }

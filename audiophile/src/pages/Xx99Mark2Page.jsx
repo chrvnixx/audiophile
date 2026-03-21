@@ -51,7 +51,7 @@ export default function Xx99Mark2Page() {
           <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl  mb-4 lg:h-140 lg:w-140   ">
             <div>
               <img
-                className="w-50"
+                className="w-50 lg:w-auto"
                 src={xx99}
                 alt="xx99 mark 2 headphones image"
               />
@@ -140,16 +140,24 @@ export default function Xx99Mark2Page() {
         </div>
       </div>
 
-      <div className=" flex flex-col gap-5 mt-22 items-center px-6 lg:flex-row">
+      <div className=" flex flex-col gap-5 mt-22 items-center px-6 lg:flex-row lg:gap-8">
         <div className="flex flex-col gap-5 lg:flex lg:flex-col  lg:gap-8">
-          <div className="border border-green-600 flex w-82 h-50  overflow-hidden rounded-xl lg:w-111 lg:h-70">
-            <img className="w-92 h-52 lg:w-122 lg:-mt-10 " src={model} alt="" />
+          <div className=" flex w-82 h-50  overflow-hidden rounded-xl lg:w-111 lg:h-60">
+            <img
+              className="w-92 h-52 lg:w-150 lg:h-70 lg:-mt-10 "
+              src={model}
+              alt=""
+            />
           </div>
-          <div className=" overflow-hidden rounded-xl lg:w-111 lg:h-70">
-            <img className="lg:h-82  lg:w-150 lg:-mt-10 " src={model3} alt="" />
+          <div className="  overflow-hidden rounded-xl lg:w-111 lg:h-50">
+            <img className="lg:h-65 lg:w-120 lg:-mt-10 " src={model3} alt="" />
           </div>
         </div>
-        <img className="h-92 rounded-xl" src={prodimage} alt="" />
+        <img
+          className="h-92 border rounded-xl lg:h-118"
+          src={prodimage}
+          alt=""
+        />
       </div>
 
       <div>

@@ -48,7 +48,11 @@ export default function Yx1EarphonePage() {
         <div className="lg:flex lg:justify-center lg:w-377 lg:gap-65 lg:items-center ">
           <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl mb-4 lg:w-140 lg:h-140  ">
             <div>
-              <img className="w-50 " src={yx1} alt="yx1 earphones image" />
+              <img
+                className="w-50 lg:w-auto "
+                src={yx1}
+                alt="yx1 earphones image"
+              />
             </div>
           </div>
 

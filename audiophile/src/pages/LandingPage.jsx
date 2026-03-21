@@ -12,11 +12,10 @@ import zx7 from "../assets/landing-page/zx7.svg";
 import TransparentButton from "../components/TransparentButton";
 import yx1 from "../assets/landing-page/yx1.svg";
 import EndStatement from "../components/EndStatement";
-import { Link } from "react-router";
 
 export default function LandingPage() {
   return (
-    <div className="w-full ">
+    <div className="w-full pb-16">
       <div className="bg-[#000000] flex flex-col lg:flex-row lg:gap-20 items-center w-full h-140 relative text-white lg:px-71 lg:h-182 ">
         <div className="absolute top-26 z-2 flex flex-col items-center lg:static lg:justify-start lg:flex lg:flex-col lg:items-start  ">
           <span className=" opacity-50 tracking-[0.6em] font-light ml-3 ">
@@ -33,8 +32,12 @@ export default function LandingPage() {
           <BrownButton text="SEE PRODUCT" linkto="/headphones/xx99-mark-two" />
         </div>
 
-        <div className="opacity-40 overflow-hidden flex h-100 justify-center lg:flex lg:h-180 lg:justify-center lg:items-center  ">
-          <img className="-mt-18 lg:h-221 " src={markII} alt="" />
+        <div className=" opacity-40  overflow-hidden h-120 flex mt- justify-center lg:mask-[radial-gradient(circle,_black_45%,_transparent_70%)] lg:flex lg:h-180 lg:justify-center lg:items-center lg:opacity-90  ">
+          <img
+            className="-mt-18 scale-150 lg:h-221 lg:scale-100 "
+            src={markII}
+            alt=""
+          />
         </div>
       </div>
 
@@ -87,14 +90,18 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <div className=" border border-green-700 relative h-80 rounded-xl overflow-hidden mt-6 flex justify-center w-full  lg:w-7xl lg:mt-12 ">
-          <div className="absolute top-25 left-24">
+        <div className="  relative h-80 rounded-xl overflow-clip mt-6 flex justify-center w-full  lg:w-7xl lg:mt-12 ">
+          <div className="absolute top-25 left-4 lg:top-25 lg:left-24 z-2">
             <h2 className=" z-2 font-semibold text-[28px] tracking-widest lg:text-[28px]">
               ZX7 SPEAKER
             </h2>
             <TransparentButton text="SEE PRODUCT" linkto="/speakers/zx7" />
           </div>
-          <img className=" lg:h-300 lg:-mt-160 " src={zx7} alt="" />
+          <img
+            className=" scale-170 mb-10 ml-35  lg:w-7xl lg:-mt-140 "
+            src={zx7}
+            alt=""
+          />
         </div>
 
         <div className="w-full  lg:flex lg:justify-center lg:gap-20 lg:mt-12 ">

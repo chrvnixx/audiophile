@@ -50,7 +50,7 @@ export default function Xx59HeadphonesPage() {
           <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl lg:h-140 lg:w-140   ">
             <div>
               <img
-                className="w-50"
+                className="w-50 lg:w-auto"
                 src={xx59H}
                 alt="xx99 mark 1 headphones image"
               />
@@ -58,7 +58,7 @@ export default function Xx59HeadphonesPage() {
           </div>
 
           <div>
-            <h2 className=" font-semibold text-[28px] tracking-widest mt-6 text-black  ">
+            <h2 className=" font-semibold text-[28px] tracking-widest mt-6 text-black lg:text-[40px] ">
               XX59 <br />
               HEADPHONES
             </h2>

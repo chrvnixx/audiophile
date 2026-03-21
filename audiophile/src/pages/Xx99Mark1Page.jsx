@@ -52,7 +52,7 @@ export default function Xx99Mark1Page() {
           <div className="bg-[#f1f1f1] h-88 flex justify-center items-center rounded-xl lg:h-140 lg:w-140   ">
             <div>
               <img
-                className="w-50"
+                className="w-50 lg:w-auto"
                 src={mark1}
                 alt="xx99 mark 1 headphones image"
               />
