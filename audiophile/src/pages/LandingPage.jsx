@@ -6,7 +6,7 @@ import { ChevronRight } from "lucide-react";
 import ProductCard from "../components/ProductCard";
 import speaker from "../assets/landing-page/speaker.svg";
 import earphones from "../assets/landing-page/earphones.svg";
-import zx9 from "../assets/landing-page/ZX9.svg";
+import zx9 from "../assets/landing-page/zX9.svg";
 import BlackButton from "../components/BlackButton";
 import zx7 from "../assets/landing-page/zx7.svg";
 import TransparentButton from "../components/TransparentButton";
