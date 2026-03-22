@@ -33,7 +33,7 @@ export default function OrderConfirmation({
             <div className="flex gap-14 ">
               <div className="flex justify-between gap-5 items-center">
                 <img className="w-7 h-8" src={cart[0]?.image} alt="" />
-                <div className="flex flex-col text-[15px] font-bold">
+                <div className="flex flex-col text-[15px] lg:w-30 font-bold ">
                   <span>{cart[0]?.name}</span>
                   <span className="opacity-50">
                     ${cart[0]?.price.toLocaleString()}
