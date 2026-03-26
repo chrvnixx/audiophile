@@ -1,2 +1,2 @@
 The audiophile website is a website designed to sell quality audio equipments to Professionals and music lovers alike...
-Check the live website here: https://audiophile-25n1qawyn-adeola-adekolas-projects.vercel.app/
+Check the live website here:https://audiophile-blush.vercel.app/
