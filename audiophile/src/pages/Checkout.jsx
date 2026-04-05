@@ -62,7 +62,7 @@ export default function Checkout({
         setTimeout(() => {
           setIsLoading(false);
           setOpenConfirmationModal(true);
-        }, 3000);
+        }, 5000);
       }, 0);
     } else {
       toast.error(
