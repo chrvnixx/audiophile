@@ -32,7 +32,7 @@ export default function LandingPage() {
           <BrownButton text="SEE PRODUCT" linkto="/headphones/xx99-mark-two" />
         </div>
 
-        <div className=" opacity-40  overflow-hidden h-120 flex mt- justify-center lg:mask-[radial-gradient(circle,_black_45%,_transparent_70%)] lg:flex lg:h-180 lg:justify-center lg:items-center lg:opacity-90  ">
+        <div className=" opacity-40  overflow-hidden h-120 flex mt- justify-center lg:mask-[radial-gradient(circle,black_45%,transparent_70%)] lg:flex lg:h-180 lg:justify-center lg:items-center lg:opacity-90  ">
           <img
             className="-mt-18 scale-150 lg:h-221 lg:scale-100 "
             src={markII}
