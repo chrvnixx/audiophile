@@ -21,12 +21,15 @@ import ScrollToTop from "./components/ScrollToTop";
 import Xx59HeadphonesPage from "./pages/Xx59HeadphonesPage";
 import ConfirmationModal from "./components/ConfirmationModal";
 import OrderConfirmation from "./components/OrderConfirmation";
+import LoadingModal from "./components/LoadingModal";
+import Loading from "./components/Loading";
 
 function App() {
   const [grandTotal, setGrandTotal] = useState(0);
   const [openCart, setOpenCart] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   const [openConfirmationModal, setOpenConfirmationModal] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   return (
     <>
@@ -41,13 +44,17 @@ function App() {
           <Menu setOpenMenu={setOpenMenu} />
         </MenuModal>
 
+        <LoadingModal isLoading={isLoading}>
+          <Loading />
+        </LoadingModal>
+
         <ConfirmationModal openConfirmationModal={openConfirmationModal}>
           <OrderConfirmation
             grandTotal={grandTotal}
             setOpenConfirmationModal={setOpenConfirmationModal}
           />
         </ConfirmationModal>
-
+{console.log({load:isLoading})}
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<LandingPage />} />
@@ -61,6 +68,7 @@ function App() {
                 setOpenConfirmationModal={setOpenConfirmationModal}
                 setGrandTotal={setGrandTotal}
                 grandTotal={grandTotal}
+                setIsLoading={setIsLoading}
               />
             }
           />

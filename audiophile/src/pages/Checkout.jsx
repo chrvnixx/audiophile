@@ -7,6 +7,7 @@ export default function Checkout({
   setOpenConfirmationModal,
   grandTotal,
   setGrandTotal,
+  setIsLoading,
 }) {
   const navigate = useNavigate();
   const { cart, total } = useCart();
@@ -56,7 +57,13 @@ export default function Checkout({
   function handleClick(e) {
     e.preventDefault();
     if (isFormValid && payment) {
-      setOpenConfirmationModal(true);
+      setTimeout(() => {
+        setIsLoading(true);
+        setTimeout(() => {
+          setIsLoading(false);
+          setOpenConfirmationModal(true);
+        }, 3000);
+      }, 0);
     } else {
       toast.error(
         "Fill in all your details & choose a preferred payment method",
@@ -249,6 +256,8 @@ export default function Checkout({
             )}
           </div>
         </div>
+
+        {/* summary */}
         <div className="mt-8 py-8 px-6 bg-white rounded-xl flex flex-col lg:w-88 lg:mt-0 ">
           <h3 className=" text-[18px] font-medium ">SUMMARY</h3>
 
